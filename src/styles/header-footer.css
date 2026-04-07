@@ -3,6 +3,11 @@
   margin: 0;              /* ← CLAVE */
   padding: 0;
   border-bottom: 2px solid #b9b9b9; /* ← LÍNEA */
+
+  position:sticky;
+  top:0; 
+  z-index: 1000;
+
 }
 
 .header-content {
