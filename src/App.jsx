@@ -1,18 +1,13 @@
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
 import Footer from "./components/Footer";
+import AppRouter from "./router/AppRouter";
 
 export default function App() {
   return (
-    <div className="app-wrapper">
+    <>
       <Navbar />
-
-      <main className="main-content">
-        <Home />
-      </main>
-
+      <AppRouter />
       <Footer />
-    </div>
+    </>
   );
 }
-``
