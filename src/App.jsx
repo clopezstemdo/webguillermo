@@ -4,10 +4,14 @@ import AppRouter from "./router/AppRouter";
 
 export default function App() {
   return (
-    <>
+    <div className="app-wrapper">
       <Navbar />
-      <AppRouter />
+
+      <main className="main-content">
+        <AppRouter />
+      </main>
+
       <Footer />
-    </>
+    </div>
   );
 }
