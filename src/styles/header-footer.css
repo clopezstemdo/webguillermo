@@ -1,0 +1,42 @@
+.site-header {
+  background: white;
+  margin: 0;              /* ← CLAVE */
+  padding: 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;     /* ← el espacio correcto va aquí */
+  font-family: "Times New Roman", Times, serif;
+}
+
+.site-title {
+  font-size: 20px;
+  font-weight: normal;   /* ← SIN negrita */
+  color: #000;           /* ← negro, no gris */
+  font-family: "Times New Roman", Times, serif;
+}
+
+.site-header nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #000;
+  font-weight: normal;
+}
+
+.site-footer {
+  font-family: "Times New Roman", Times, serif;
+  background: #f2f2f2;
+  padding: 30px 0;
+  text-align: center;
+  color: #000;
+  margin: 0;
+}
+
+.footer-content {
+  text-align: center;
+  color: #000;
+  font-size: 14px;
+}
