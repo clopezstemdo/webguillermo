@@ -9,10 +9,10 @@ export default function Navbar() {
         </span>
 
         <nav>
-          <a href="#">Inicio</a>
-          <a href="#">Servicios</a>
-          <a href="#">Sobre mí</a>
-          <a href="#">Contacto</a>
+          <a href="/">Inicio</a>
+          <a href="/servicios">Servicios</a>
+          <a href="/sobre-mi">Sobre mí</a>
+          <a href="/contacto">Contacto</a>
         </nav>
       </div>
     </header>
