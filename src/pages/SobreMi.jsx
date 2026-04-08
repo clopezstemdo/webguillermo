@@ -1,43 +1,48 @@
 import '../styles/sobre-mi.css'
 
-const About = () => {
+const SobreMi = () => {
   return (
     <section className="about">
       <div className="about-container">
 
         {/* IMAGEN */}
         <div className="about-image">
-          <img
+            <img
             src="https://via.placeholder.com/300"
             alt="Foto del cliente"
-          />
+            />
         </div>
 
         {/* TEXTO */}
         <div className="about-content">
-          <h1>Sobre mí</h1>
+            <h1>Sobre mí</h1>
 
-          <h2>Nombre del cliente</h2>
+            <h2>Nombre del cliente</h2>
+            <span className="about-role">Profesional del sector / Autónomo</span>
 
-          <p>
+            <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+            </p>
 
-          <p>
+            <p>
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
             nisi ut aliquip ex ea commodo consequat.
-          </p>
+            </p>
 
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse 
-            cillum dolore eu fugiat nulla pariatur.
-          </p>
+            <ul className="about-list">
+            <li>✔ Más de X años de experiencia</li>
+            <li>✔ Atención personalizada</li>
+            <li>✔ Servicio en Talavera y alrededores</li>
+            </ul>
+
+            <a href="/contacto" className="about-button">
+            Contactar
+            </a>
         </div>
-
       </div>
     </section>
   )
 }
 
-export default About
+export default SobreMi
