@@ -1,4 +1,5 @@
 import '../styles/sobre-mi.css'
+import image from "../assets/foto_SobreMi.webp"
 
 const SobreMi = () => {
   return (
@@ -8,7 +9,7 @@ const SobreMi = () => {
         {/* IMAGEN */}
         <div className="about-image">
             <img
-            src="https://via.placeholder.com/300"
+            src={image}
             alt="Foto del cliente"
             />
         </div>
