@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from "../pages/Home"
 import Contacto from "../pages/Contacto"
-import Servcios from "../pages/Servicios"
+import Servicios from "../pages/Servicios"
+import SobreMi from "../pages/SobreMi"
 
 const AppRouter = () => {
     return(
@@ -9,7 +10,8 @@ const AppRouter = () => {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/contacto" element={<Contacto/>}/>
-                <Route path="/servicios" element={<Servcios />} />
+                <Route path="/servicios" element={<Servicios />} />
+                <Route path="/sobre-mi" element={<SobreMi />} />
             </Routes>
         </BrowserRouter>
     )

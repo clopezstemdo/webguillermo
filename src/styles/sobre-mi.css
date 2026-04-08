@@ -1,0 +1,33 @@
+.about {
+  padding: 2rem;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* IMAGEN */
+.about-image img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+/* TEXTO */
+.about-content h1 {
+  margin-bottom: 1rem;
+}
+
+.about-content h2 {
+  margin-bottom: 1rem;
+  font-weight: normal;
+  color: #555;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
