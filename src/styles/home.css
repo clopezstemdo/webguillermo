@@ -50,6 +50,9 @@
   border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block; /* importante para que actúe como botón */
+
 }
 
 .btn-secondary {
@@ -59,7 +62,16 @@
   padding: 12px 22px;
   border-radius: 25px;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
+
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  text-decoration: none;
+}
+
 
 /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */
 /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */
