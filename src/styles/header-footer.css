@@ -1,36 +1,62 @@
+/* ===================== */
+/* HEADER */
+/* ===================== */
+
 .site-header {
   background: white;
-  margin: 0;              /* ← CLAVE */
+  margin: 0;
   padding: 0;
-  border-bottom: 2px solid #b9b9b9; /* ← LÍNEA */
+  border-bottom: 2px solid #b9b9b9;
 
-  position:sticky;
-  top:0; 
+  position: sticky;
+  top: 0;
   z-index: 1000;
-
 }
 
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;     /* ← el espacio correcto va aquí */
+  padding: 18px 40px;
   font-family: "Times New Roman", Times, serif;
 }
 
+/* TÍTULO */
 .site-title {
   font-size: 20px;
-  font-weight: normal;   /* ← SIN negrita */
-  color: #000;           /* ← negro, no gris */
+  font-weight: normal;
+  color: #000;
   font-family: "Times New Roman", Times, serif;
 }
 
-.site-header nav a {
+/* NAV */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
   margin-left: 30px;
   text-decoration: none;
   color: #000;
   font-weight: normal;
+  position: relative;
 }
+
+/* HOVER */
+.nav-links a:hover {
+  color: #000;
+}
+
+/* LINK ACTIVO (página actual) */
+.nav-links a.active {
+  border-bottom: 2px solid #000;
+  padding-bottom: 4px;
+}
+
+/* ===================== */
+/* FOOTER */
+/* ===================== */
 
 .site-footer {
   font-family: "Times New Roman", Times, serif;

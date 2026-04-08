@@ -6,14 +6,12 @@ import SobreMi from "../pages/SobreMi"
 
 const AppRouter = () => {
     return(
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/contacto" element={<Contacto/>}/>
-                <Route path="/servicios" element={<Servicios />} />
-                <Route path="/sobre-mi" element={<SobreMi />} />
-            </Routes>
-        </BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/contacto" element={<Contacto/>}/>
+            <Route path="/servicios" element={<Servicios />} />
+            <Route path="/sobre-mi" element={<SobreMi />} />
+        </Routes>
     )
 }
 
