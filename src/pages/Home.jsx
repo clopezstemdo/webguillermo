@@ -1,5 +1,10 @@
 import "../styles/home.css";
 
+import tiktokIcon from "../assets/tiktok.svg";
+import instagramIcon from "../assets/instagram.svg";
+import linkedinIcon from "../assets/linkedin.svg";
+
+
 export default function Home() {
   return (
     <>
@@ -79,6 +84,65 @@ export default function Home() {
 
   </div>
 </section>
+
+<section className="social-section">     
+  <h2>Mis Publicaciones</h2>
+
+  <p className="social-description">
+    Sígueme en redes sociales para mantenerte actualizado sobre temas
+    de criminología, derecho penal, casos de interés y análisis jurídico.
+  </p>
+
+  <div className="social-grid">
+
+    <div className="social-card">
+      
+<a
+  href="https://www.tiktok.com/@guillermocriminologo"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="social-card"
+>
+  <div className="social-icon">
+    <img src={tiktokIcon} alt="TikTok" />
+  </div>
+  <span>TikTok</span>
+</a>
+
+    </div>
+
+    <div className="social-card">
+      <a
+  href="https://www.instagram.com/guillermoexpositocriminologo/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="social-card"
+>
+  <div className="social-icon">
+    <img src={instagramIcon} alt="Instagram" />
+  </div>
+  <span>Instagram</span>
+</a>
+    </div>
+
+    <div className="social-card">
+      <a
+  href="https://www.linkedin.com/in/guillermo-expósito-criminólogo"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="social-card"
+>
+  <div className="social-icon">
+    <img src={linkedinIcon} alt="LinkedIn" />
+  </div>
+  <span>LinkedIn</span>
+</a>
+    </div>
+
+  </div>
+</section>
+
+
     </>
   );
 }

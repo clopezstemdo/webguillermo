@@ -1,3 +1,7 @@
+/*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */
+/*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */
+/*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */
+
 .hero {
   width: 100%;
   background-color: #6c001d;
@@ -5,8 +9,6 @@
   padding: 90px 0;
   margin: 0;              /* ← IMPORTANTE */
 }
-
-/* Contenedor interno */
 
 .hero-content {
   max-width: 1200px;
@@ -59,7 +61,10 @@
   cursor: pointer;
 }
 
-/* SECCIÓN GENERAL */
+/* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */
+/* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */
+/* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */ /* SECCIÓN GENERAL */
+
 .experience-section {
   background-color: #ffffff;
   padding: 90px 0;
@@ -137,4 +142,85 @@
   font-size: 14px;
   color: #222;
   line-height: 1.4;
+}
+
+/* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ 
+/* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ 
+/* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ 
+
+.social-section {
+  padding: 30px 60px;
+  background-color: #dddddd;
+  text-align: center;
+}
+
+.social-section h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.social-description {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* TARJETA */
+.social-card {
+  .social-card {
+  display: block;
+  background-color: #e0e0e0;
+  border-radius: 10px;          /* más rectangular */
+  padding: 40px 20px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 14px;
+  transition: background-color 0.25s ease;
+  }
+}
+
+/* ICONO */
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.social-icon img {
+  width: 60px;
+  height: auto;
+}
+
+/* TEXTO */
+.social-card span {
+  display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+}
+
+.social-card:hover {
+  background-color: #6c001d;
+  border-radius: 14px;
+}
+
+.social-card:hover span {
+  color: #fff;
+}
+
+.social-card:hover img {
+  filter: brightness(0) invert(1);
 }
