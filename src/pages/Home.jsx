@@ -3,6 +3,7 @@ import "../styles/home.css";
 import tiktokIcon from "../assets/tiktok.svg";
 import instagramIcon from "../assets/instagram.svg";
 import linkedinIcon from "../assets/linkedin.svg";
+import { NavLink } from "react-router-dom";
 
 
 export default function Home() {
@@ -24,10 +25,17 @@ export default function Home() {
           y un profundo conocimiento del sistema penal.
         </p>
 
+        
         <div className="hero-buttons">
-          <button className="btn-primary">Consulta gratuita</button>
-          <button className="btn-secondary">Ver servicios</button>
+          <NavLink to="/contacto" className="btn-primary">
+            Consulta gratuita
+          </NavLink>
+
+          <NavLink to="/servicios" className="btn-secondary">
+            Ver servicios
+          </NavLink>
         </div>
+
       </div>
     </section>
 
