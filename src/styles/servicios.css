@@ -1,6 +1,3 @@
-/* =========================
-   HERO SERVICIOS
-========================= */
 .servicios-hero {
   background-color: #6c001d;
   color: white;
@@ -9,71 +6,51 @@
 
 .servicios-hero h1 {
   font-size: 36px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .servicios-hero p {
   max-width: 600px;
-  line-height: 1.6;
 }
 
-/* =========================
-   SECCIÓN SERVICIOS
-========================= */
-.servicios-section {
+.servicios-bloque {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.servicios-alt {
   background-color: #f5f5f5;
-  padding: 90px 0;
 }
 
-.servicios-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-}
-
-/* =========================
-   CARD SERVICIO
-========================= */
-.servicios-card {
-  background-color: white;
-  border-radius: 16px;
-  padding: 35px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.servicios-card h3 {
-  margin-bottom: 12px;
-  font-size: 18px;
-  color: #000;
-}
-
-.servicios-card p {
-  color: #444;
-  line-height: 1.6;
-}
-
-.servicios-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
-}
-
-/* =========================
-   CTA FINAL
-========================= */
-.servicios-cta {
-  background-color: #6c001d;
-  color: white;
-  padding: 100px 0;
-  text-align: center;
-}
-
-.servicios-cta h2 {
-  font-size: 30px;
+.servicios-bloque h2 {
+  font-size: 28px;
   margin-bottom: 10px;
 }
 
-.servicios-cta p {
-  margin-bottom: 30px;
-  font-size: 16px;
-  opacity: 0.9;
+.servicios-intro {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.servicios-bloque p {
+  max-width: 800px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.servicios-lista {
+  list-style: none;
+  padding-left: 0;
+}
+
+.servicios-lista li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.servicios-cta {
+  background-color: #6c001d;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
 }
