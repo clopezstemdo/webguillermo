@@ -12,17 +12,20 @@ export default function Home() {
       <section className="hero">
         <div className=" container hero-content">
           <span className="hero-tag">
-            ⚖️ Criminología y Derecho Penal
+            ⚖️ Asesoria en Criminología y Derecho Penal
           </span>
 
           <h1 className="hero-title">
-            Asesoría Jurídica Especializada en Derecho Penal
+            La sentencia de un juicio no solo depende de las leyes, sino de cómo se argumenta la verdad.
           </h1>
 
+
           <p className="hero-text">
-            Asesoramiento legal especializado con enfoque criminológico.
-            Protegemos tus derechos con experiencia, rigor profesional
-            y un profundo conocimiento del sistema penal.
+            Como criminólogo especializado en el ámbito penal, ofrezco un
+              enfoque integral que combina el análisis criminológico con la
+              defensa jurídica. Mi formación me permite comprender no solo
+              los aspectos legales, sino también los factores criminológicos
+              que intervienen en cada caso.
           </p>
 
 
@@ -38,6 +41,29 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/*
+       <section className="home-statement">
+        <div className="container">
+          <p>
+            La sentencia de un juicio no solo depende de las leyes, sino de cómo se
+            argumenta la verdad. 
+          </p>
+        </div>
+      </section>
+      
+
+      <section className="home-statement2">
+        <div className="container">
+          <p>
+            Como criminólogo, te ayudo a analizar las variables de tu caso, preparar cada una de las intervenciones de manera sólida y gestionar la información de forma estratégica para que tengas el control en cualquier procedimiento. 
+          </p>
+        </div>
+      </section>
+
+      
+       */}
+
 
       <section className="experience-section">
         <div className="container experience-layout">
