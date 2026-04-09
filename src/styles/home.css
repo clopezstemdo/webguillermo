@@ -84,11 +84,12 @@
   padding: 90px 0;
 }
 
-/* LAYOUT DOS COLUMNAS */
 .experience-layout {
   display: flex;
   gap: 60px;
+  align-items: flex-start;
 }
+
 
 /* COLUMNA IZQUIERDA */
 .experience-text {
@@ -137,19 +138,19 @@
 }
 
 /* TARJETA INDIVIDUAL */
-.service-card {
+.home-service-card {
   background-color: #bdbdbd;
   border-radius: 12px;
   padding: 22px;
 }
 
-.service-card h4 {
+.home-service-card h4 {
   margin-bottom: 10px;
   font-size: 16px;
   color: #000;
 }
 
-.service-card p {
+.home-service-card p {
   font-size: 14px;
   color: #222;
   line-height: 1.4;

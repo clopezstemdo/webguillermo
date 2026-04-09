@@ -1,35 +1,79 @@
-.services {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+/* =========================
+   HERO SERVICIOS
+========================= */
+.servicios-hero {
+  background-color: #6c001d;
+  color: white;
+  padding: 80px 0;
 }
 
-.services h1 {
-  text-align: center;
-  margin-bottom: 2rem;
+.servicios-hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
 }
 
-/* GRID DE SERVICIOS */
-.services-grid {
+.servicios-hero p {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* =========================
+   SECCIÓN SERVICIOS
+========================= */
+.servicios-section {
+  background-color: #f5f5f5;
+  padding: 90px 0;
+}
+
+.servicios-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
 }
 
-/* TARJETA */
-.service-card {
-  padding: 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  background: #fff;
+/* =========================
+   CARD SERVICIO
+========================= */
+.servicios-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 35px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.servicios-card h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #000;
 }
 
-.service-card h2 {
-  margin-bottom: 0.5rem;
+.servicios-card p {
+  color: #444;
+  line-height: 1.6;
+}
+
+.servicios-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   CTA FINAL
+========================= */
+.servicios-cta {
+  background-color: #6c001d;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.servicios-cta h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.servicios-cta p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  opacity: 0.9;
 }
