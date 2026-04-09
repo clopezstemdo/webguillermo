@@ -1,5 +1,5 @@
 import '../styles/sobre-mi.css'
-import image from "../assets/foto_SobreMi.webp"
+import image from "../assets/Guillermo.webp"
 
 const SobreMi = () => {
   return (

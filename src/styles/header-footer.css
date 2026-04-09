@@ -21,12 +21,6 @@
 }
 
 
-.site-header .container {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -66,6 +60,10 @@
   position: relative;
 }
 
+.mobile-menu-header {
+    display: none;
+  }
+
 /* HOVER */
 .nav-links a:hover {
   color: #000;
@@ -76,21 +74,70 @@
   border-bottom: 2px solid #000;
   padding-bottom: 4px;
 }
-/* MOVIL */
 
+/* MOVIL */
 @media (max-width: 768px) {
   
   .header-content {
-      padding: 18px 0; /* menos alto en móvil */
+    padding: 18px 0; /* menos alto en móvil */
   }
-
+  /* Mostrar hamburguesa */
   .menu-toggle {
     display: block;
   }
+  
+  .mobile-menu-header {
+    display: flex;
+  }
+
+  .mobile-menu-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  
+  .mobile-logo {
+    width: 120px;
+    height: auto;
+  }
+
+
+  .close-menu {
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
 
   .nav-links {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 350px;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px;
+    gap: 20px;
+    transition: left 0.3s ease;
   }
+
+  
+/* MENÚ visible */
+  .nav-links.open {
+    left: 0;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    font-size: 18px;
+  }
+
 }
 
 
