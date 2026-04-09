@@ -138,10 +138,25 @@
 
 /* TARJETA INDIVIDUAL */
 .service-card {
-  background-color: #bdbdbd;
+
+  background-color: #e4e4e4;
   border-radius: 12px;
   padding: 22px;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
 }
+
+
+.service-card:hover {
+  background-color: #a8a8a8;        /* gris un poco más oscuro */
+  transform: translateY(-6px);      /* se levanta */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 
 .service-card h4 {
   margin-bottom: 10px;
