@@ -39,11 +39,8 @@ export default function Home() {
         </div>
       </section>
 
-      
-<section className="experience-section">
-  <div className="container">
-    <div className="experience-layout">
-
+      <section className="experience-section">
+        <div className="container experience-layout">
 
           {/* COLUMNA IZQUIERDA */}
           <div className="experience-text">
@@ -72,7 +69,7 @@ export default function Home() {
 
           {/* COLUMNA DERECHA */}
           <div className="experience-cards">
-            <div className="home-service-card">
+            <div className="service-card">
               <h4>Asesoría penal</h4>
               <p>Asesoramiento en todas las fases del proceso penal.</p>
             </div>
@@ -93,11 +90,8 @@ export default function Home() {
             </div>
           </div>
 
-        
-</div>
-  </div>
-</section>
-
+        </div>
+      </section>
 
       <section className="social-section">
         <h2>Mis Publicaciones</h2>
