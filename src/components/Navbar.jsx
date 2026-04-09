@@ -4,28 +4,32 @@ import "../styles/header-footer.css";
 export default function Navbar() {
   return (
     <header className="site-header">
-      <div className="header-content">
-        <span className="site-title">
-          Guillermo Expósito Criminólogo
-        </span>
+      <div className="container">
+        <div className="header-content">
 
-        <nav className="nav-links">
-          <NavLink to="/" end>
-            Inicio
-          </NavLink>
+          <span className="site-title">
+            Guillermo Expósito Criminólogo
+          </span>
 
-          <NavLink to="/servicios">
-            Servicios
-          </NavLink>
+          <nav className="nav-links">
+            <button className="menu-toggle">☰</button>
+            <NavLink to="/" end>
+              Inicio
+            </NavLink>
 
-          <NavLink to="/sobre-mi">
-            Sobre mí
-          </NavLink>
+            <NavLink to="/servicios">
+              Servicios
+            </NavLink>
 
-          <NavLink to="/contacto">
-            Contacto
-          </NavLink>
-        </nav>
+            <NavLink to="/sobre-mi">
+              Sobre mí
+            </NavLink>
+
+            <NavLink to="/contacto">
+              Contacto
+            </NavLink>
+          </nav>
+        </div>
       </div>
     </header>
   );
