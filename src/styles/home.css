@@ -1,3 +1,11 @@
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
 /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */
 /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */
 /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */
@@ -7,20 +15,8 @@
   background-color: #6c001d;
   color: white;
   padding: 90px 0;
-  margin: 0;              /* ← IMPORTANTE */
-
-  
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+  margin: 0;             
 }
-
-.hero-content {
-  max-width: 1200px;
-  margin-left: 60px;   /* empuja el contenido desde la izquierda */
-}
-
 
 .hero-tag {
   display: inline-block;
@@ -91,10 +87,7 @@
 /* LAYOUT DOS COLUMNAS */
 .experience-layout {
   display: flex;
-  justify-content: space-between;
   gap: 60px;
-  max-width: 1400px;
-  margin-left: 60px;
 }
 
 /* COLUMNA IZQUIERDA */
@@ -167,7 +160,7 @@
 /* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ /* SOCIAL SECTION */ 
 
 .social-section {
-  padding: 30px 60px;
+  padding: 60px 20px;
   background-color: #dddddd;
   text-align: center;
 }
@@ -193,22 +186,23 @@
   margin: 0 auto;
 }
 
-/* TARJETA */
+/* CONTENEDOR */
 .social-card {
-  .social-card {
+  display: flex;
+}
+
+/* ENLACE / TARJETA */
+.social-link {
   display: block;
+  width: 100%;
   background-color: #e0e0e0;
-  border-radius: 10px;          /* más rectangular */
+  border-radius: 14px;
   padding: 40px 20px;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-  overflow: hidden;
-  border-radius: 14px;
   transition: background-color 0.25s ease;
-  }
 }
-
 
 /* ICONO */
 .social-icon {
@@ -224,22 +218,87 @@
 }
 
 /* TEXTO */
-.social-card span {
+.social-link span {
   display: block;
-    font-size: 14px;
-    font-weight: 600;
-    color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
 }
 
-.social-card:hover {
+/* HOVER */
+.social-link:hover {
   background-color: #6c001d;
-  border-radius: 14px;
 }
 
-.social-card:hover span {
+.social-link:hover span {
   color: #fff;
 }
 
-.social-card:hover img {
+.social-link:hover img {
   filter: brightness(0) invert(1);
 }
+
+
+/* Tablet */
+@media (max-width: 992px) {
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .experience-layout {
+    flex-direction: column;
+  }
+
+  .experience-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* MOVIL */
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  /* EXPERIENCE */
+  .experience-layout {
+    gap: 40px;
+  }
+
+  .experience-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* SOCIAL */
+  .social-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+}
+
