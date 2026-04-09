@@ -1,33 +1,59 @@
-import '../styles/servicios.css'
+import "../styles/servicios.css";
+import { Link } from "react-router-dom";
 
-const Servicios = () => {
+export default function Servicios() {
   return (
-    <section className="services">
-      <h1>Servicios</h1>
-
-      <div className="services-grid">
-        <div className="service-card">
-          <h2>Servicio 1</h2>
-          <p>Descripción breve del servicio ofrecido.</p>
+    <>
+      {/* HERO */}
+      <section className="services-hero">
+        <div className="container">
+          <h1>Servicios Profesionales</h1>
+          <p>
+            Asesoramiento especializado en criminología y derecho penal,
+            con un enfoque riguroso, personalizado y profesional.
+          </p>
         </div>
+      </section>
 
-        <div className="service-card">
-          <h2>Servicio 2</h2>
-          <p>Descripción breve del servicio ofrecido.</p>
+      {/* GRID DE SERVICIOS */}
+      <section className="services-section">
+        <div className="container services-grid">
+          <ServiceCard
+            title="Asesoría en Derecho Penal"
+            text="Asesoramiento legal en todas las fases del proceso penal, desde la orientación inicial hasta la defensa."
+          />
+          <ServiceCard
+            title="Análisis Criminológico"
+            text="Estudio científico del comportamiento delictivo y del contexto personal y social implicado en cada caso."
+          />
+          <ServiceCard
+            title="Informes Criminológicos"
+            text="Elaboración de informes periciales y criminológicos con base técnica y metodológica."
+          />
+          <ServiceCard
+            title="Asesoramiento Preventivo"
+            text="Orientación jurídica preventiva y consultiva para evitar conflictos legales."
+          />
         </div>
+      </section>
 
-        <div className="service-card">
-          <h2>Servicio 3</h2>
-          <p>Descripción breve del servicio ofrecido.</p>
-        </div>
-
-        <div className="service-card">
-          <h2>Servicio 4</h2>
-          <p>Descripción breve del servicio ofrecido.</p>
-        </div>
-      </div>
-    </section>
-  )
+      {/* CTA FINAL */}
+      <section className="services-cta">
+        <h2>¿Necesitas asesoramiento profesional?</h2>
+        <Link to="/contacto" className="btn-primary">
+          Consulta gratuita
+        </Link>
+      </section>
+    </>
+  );
 }
 
-export default Servicios
+function ServiceCard({ title, text }) {
+  return (
+    <div className="service-card">
+      <h3>{title}</h3>
+      <p>{text}</p>
+    </div>
+  );
+}
+``
