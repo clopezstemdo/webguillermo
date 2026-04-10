@@ -71,7 +71,7 @@ const SobreMi = () => {
         </div>
       </section>
       <section className="faq">
-        <div className="container">
+        <div className="faq-container">
           <h2>Preguntas frecuentes (FAQ)</h2>
           
           {faqs.map((faq, index) => (
