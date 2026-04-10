@@ -1,9 +1,18 @@
 
 import '../styles/contacto.css'
 import { useState } from 'react'
+import emailjs from "emailjs-com"
 
 const Contact = () => {
   
+  // Servicio EmailJS
+  // service_ddp5j4p
+  //Public key
+  // EFu53trEKlEOzmhHL
+  //Template ID
+  //template_zkclswb
+  // Template ID Respuesta
+  // template_20yh0np
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -16,20 +25,48 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault(); // 🚫 evita recarga
 
-    if (validateForm()) {
-      console.log("Formulario válido", formData);
+    if (!validateForm()) 
+      return ;
 
-      // Limpia el formulario (opcional)
+    emailjs
+    .send(
+      "service_ddp5j4p", //Servicio EmailJS
+      "template_zkclswb", //Template ID
+      {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        message: formData.message,
+      },
+      "EFu53trEKlEOzmhHL" //Public key
+    )
+    .then(() => {
+      alert("Mensaje enviado correctamente ✅");
+
       setFormData({
         name: "",
         phone: "",
         email: "",
         message: ""
       });
-
       setErrors({});
-      alert("Formulario enviado correctamente ✅");
-    }
+    })
+    .catch((error) => {
+      console.error("Error al enviar el email:",error);
+      alert("Error al enviar el mensaje ❌");
+    });
+
+    // correo automático al cliente
+    emailjs.send(
+      "service_ddp5j4p",
+      "template_20yh0np",
+      {
+        name: formData.name,
+        email: formData.email,
+      },
+      "EFu53trEKlEOzmhHL"
+    );
+
   };
 
   const validateForm = () => {
@@ -44,7 +81,7 @@ const Contact = () => {
     } else if(!/^\d+$/.test(formData.phone)){
       newErrors.phone = "El teléfono solo debe contener números";
     }
-    
+
     if (!formData.email.trim()) {
       newErrors.email = "El email es obligatorio";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
