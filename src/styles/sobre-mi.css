@@ -1,7 +1,78 @@
-.about {
+/* HERO SOBRE MI */
+.sobre-mi-hero {
+  background-color: #6c001d; /* mismo color que servicios */
+  color: white;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.sobre-mi-hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.sobre-mi-hero p {
+  font-size: 16px;
+  max-width: 700px;
+}
+
+/* CONTENEDOR ABOUT + SOCIAL */
+
+
+.about-section {
   background-color: #f5f7fa;
   padding: 4rem 1rem;
 }
+
+
+.about-section-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+.about-with-social {
+  /* background-color: #f5f7fa; */
+  /* max-width: 1400px; */
+  display: flex;
+  gap: 3rem;
+  /* align-items: flex-start; */
+  align-items: stretch;
+  /* margin: 3rem auto 0; */
+}
+
+
+.about-main .about-container {
+  max-width: none;
+  width: 100%;
+}
+
+
+/* COLUMNA IZQUIERDA: ABOUT */
+.about-main {
+  display: flex;
+  flex: 2.2;      /* 👈 ocupa la mayor parte */
+  min-width: 0;   /* 👈 evita bugs de flex */
+}
+
+/* COLUMNA DERECHA: TIKTOK */
+.about-social {
+  display: flex;
+  flex: 0.8;      /* 👈 ocupa solo lo necesario */
+  display: flex;
+  justify-content: center;
+}
+
+/* Caja blanca del TikTok (estilo card) */
+.about-social-box {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  max-width: 340px;
+  height: 100%;
+}
+
 
 .about-container {
   max-width: 1100px;
@@ -13,6 +84,7 @@
   padding: 3rem;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  height: 100%;
 }
 
 /* IMAGEN */
@@ -43,17 +115,6 @@
   margin-bottom: 1rem;
   line-height: 1.6;
   color: #444;
-}
-
-/* LISTA */
-.about-list {
-  margin: 1.5rem 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.about-list li {
-  margin-bottom: 0.5rem;
 }
 
 /* BOTÓN */
@@ -140,11 +201,38 @@
   font-size: 15px;
 }
 
-
-
-
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+  .about-with-social {
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+    align-items: stretch;
+  }
+
+  .about-main,.about-social {
+    display: block;
+  }
+
+  
+  .about-container,
+  .about-social-box {
+    height: auto;
+  }
+
+
+  .about-social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2rem;
+  }
+
+  .about-social-box{
+    margin: 0 auto;
+  }
+
   .about-container {
     flex-direction: column;
     text-align: center;
