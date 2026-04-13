@@ -16,8 +16,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* COLUMNA IZQUIERDA */
-
+/* ───────────────── COLUMNA IZQUIERDA ───────────────── */
 .contact-info {
   flex: 1.2;
   background-color: #f9fafb;
@@ -32,49 +31,65 @@
   color: #111827;
 }
 
-.contact-info .contact-intro {
+.contact-intro {
   color: #444;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
+/* GRID: 2 arriba + 3 abajo */
 .contact-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
-  grid-auto-rows: 1fr;
 }
 
-
+/* TARJETA BASE */
 .contact-card {
-  
   display: flex;
   align-items: center;
   gap: 16px;
-  width: 100%; 
+  width: 100%;
   background: #ffffff;
   border-radius: 10px;
   padding: 1.5rem;
+  text-decoration: none;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   min-height: 96px;
-  transition: transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
+/* HOVER GRANATE */
 .contact-card:hover {
-  transform: translateY(-4px);
+  background-color: #8b0026;
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25);
 }
 
-/* Icono */
+/* TEXTO EN BLANCO */
+.contact-card:hover h4,
+.contact-card:hover p {
+  color: #ffffff;
+}
+
+/* ICONO BLANCO */
+.contact-card:hover .contact-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* ICONO */
 .contact-icon {
   width: 28px;
   height: 28px;
   flex-shrink: 0;
 }
 
-/* Texto */
-
-.contact-card-text{
-  flex: 1
+/* TEXTO */
+.contact-card-text {
+  flex: 1;
 }
 
 .contact-card-text h4 {
@@ -90,27 +105,7 @@
   color: #555;
 }
 
-
-
-/* .contact-info p {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.8rem 0;
-  border-bottom: 1px solid #e5e7eb;
-  font-size: 0.95rem;
-  color: #374151;
-}
-
-.contact-info p:last-child {
-  border-bottom: none;
-}
-
-.contact-info strong {
-  color: #111827;
-  font-weight: 600;
-} */
-
-/* COLUMNA DERECHA */
+/* ───────────────── COLUMNA DERECHA ───────────────── */
 .contact-form {
   flex: 0.8;
 }
@@ -149,12 +144,12 @@
   min-height: 120px;
 }
 
+/* ERRORES */
 .error {
   color: #b00020;
   font-size: 13px;
   margin-top: -8px;
 }
-
 
 /* BOTÓN */
 .contact-form button {
@@ -170,32 +165,24 @@
   transition: background-color 0.2s, transform 0.1s;
 }
 
-/* HOVER BOTÓN */
 .contact-form button:hover {
   background-color: #8b0026;
   transform: translateY(-2px);
 }
 
-/* RESPONSIVE */
-
+/* ───────────────── RESPONSIVE ───────────────── */
 @media (max-width: 1024px) {
   .contact-container {
     flex-direction: column;
   }
 }
 
-
-
 @media (max-width: 754px) {
-
   .contact-cards {
     grid-template-columns: 1fr;
   }
 
-  .contact-info {
-    text-align: center;
-  }
-
+  .contact-info,
   .contact-card {
     text-align: center;
   }
