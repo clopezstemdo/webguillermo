@@ -7,6 +7,7 @@ import mailIcon from "../assets/icons/mail.svg";
 import instagramIcon from "../assets/icons/instagram.svg";
 import tiktokIcon from "../assets/icons/tiktok.svg";
 import linkedinIcon from "../assets/icons/linkedin.svg";
+import whatsappIcon from "../assets/icons/whatsapp.svg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -58,6 +59,7 @@ const Contact = () => {
     <section className="contact">
       <div className="contact-container">
 
+        {/* COLUMNA IZQUIERDA */}
         <div className="contact-info">
           <h2>Ponte en contacto</h2>
           <p className="contact-intro">
@@ -68,49 +70,78 @@ const Contact = () => {
 
           <div className="contact-cards">
 
-            <a href="mailto:contacto@tudominio.com" className="contact-card">
+            <a href="mailto:guillermoexpositocriminologo@gmail.com" className="contact-card">
               <img src={mailIcon} alt="Email" className="contact-icon" />
               <div className="contact-card-text">
                 <h4>Email</h4>
-                <p>contacto@tudominio.com</p>
+                <p>Escribeme directamente pulsado aquí</p>
               </div>
             </a>
 
-            <a href="tel:+34600123456" className="contact-card">
+            <a href="tel:+34624969220" className="contact-card">
               <img src={phoneIcon} alt="Teléfono" className="contact-icon" />
               <div className="contact-card-text">
                 <h4>Teléfono</h4>
-                <p>+34 600 123 456</p>
+                <p>+34 624 96 92 20</p>
               </div>
             </a>
 
-            <a href="https://www.instagram.com/TU_USUARIO" className="contact-card" target="_blank" rel="noreferrer">
-              <img src={instagramIcon} alt="Instagram" className="contact-icon" />
+            <a
+              href="https://wa.me/34624969220?text=Buenas,%20querr%C3%ADa%20solicitar%20una%20valoraci%C3%B3n%20inicial."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card"
+            >
+              <img src={whatsappIcon} alt="WhatsApp" className="contact-icon" />
               <div className="contact-card-text">
-                <h4>Instagram</h4>
-                <p>@tuusuario</p>
+                <h4>WhatsApp</h4>
+                <p>Escríbeme directamente pulsando aquí</p>
               </div>
             </a>
 
-            <a href="https://www.tiktok.com/@TU_USUARIO" className="contact-card" target="_blank" rel="noreferrer">
-              <img src={tiktokIcon} alt="TikTok" className="contact-icon" />
-              <div className="contact-card-text">
-                <h4>TikTok</h4>
-                <p>@tuusuario</p>
-              </div>
-            </a>
-
-            <a href="https://www.linkedin.com/in/TU_USUARIO" className="contact-card" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.linkedin.com/in/guillermo-expósito-criminólogo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card"
+            >
               <img src={linkedinIcon} alt="LinkedIn" className="contact-icon" />
               <div className="contact-card-text">
                 <h4>LinkedIn</h4>
-                <p>Perfil profesional</p>
+                <p>guillermo-expósito-criminólogo</p>
+              </div>
+            </a>
+
+            <a
+              href="https://www.instagram.com/guillermoexpositocriminologo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card"
+            >
+              <img src={instagramIcon} alt="Instagram" className="contact-icon" />
+              <div className="contact-card-text">
+                <h4>Instagram</h4>
+                <p>@guillermoexpositocriminologo</p>
+              </div>
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@guillermocriminologo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card"
+            >
+              <img src={tiktokIcon} alt="TikTok" className="contact-icon" />
+              <div className="contact-card-text">
+                <h4>TikTok</h4>
+                <p>@guillermocriminologo</p>
               </div>
             </a>
 
           </div>
         </div>
 
+        {/* COLUMNA DERECHA */}
         <div className="contact-form">
           <h2>Envíanos tu consulta</h2>
 
@@ -119,7 +150,9 @@ const Contact = () => {
               type="text"
               placeholder="Nombre"
               value={formData.name}
-              onChange={e => setFormData({ ...formData, name: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
             />
             {errors.name && <span className="error">{errors.name}</span>}
 
@@ -127,7 +160,9 @@ const Contact = () => {
               type="tel"
               placeholder="Teléfono"
               value={formData.phone}
-              onChange={e => setFormData({ ...formData, phone: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, phone: e.target.value })
+              }
             />
             {errors.phone && <span className="error">{errors.phone}</span>}
 
@@ -135,14 +170,18 @@ const Contact = () => {
               type="email"
               placeholder="Email"
               value={formData.email}
-              onChange={e => setFormData({ ...formData, email: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
             />
             {errors.email && <span className="error">{errors.email}</span>}
 
             <textarea
               placeholder="Describe tu caso"
               value={formData.message}
-              onChange={e => setFormData({ ...formData, message: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
             />
             {errors.message && <span className="error">{errors.message}</span>}
 
@@ -156,4 +195,3 @@ const Contact = () => {
 };
 
 export default Contact;
-``
