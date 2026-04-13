@@ -2,6 +2,10 @@
 import '../styles/contacto.css'
 import { useState } from 'react'
 import emailjs from "emailjs-com"
+import phoneIcon from "../assets/icons/phone.svg"
+import mailIcon from "../assets/icons/mail.svg"
+import horarioIcon from "../assets/icons/horario.svg"
+import direccionIcon from "../assets/icons/direccion.svg"
 
 const Contact = () => {
   
@@ -114,29 +118,35 @@ const Contact = () => {
 
           <div className="contact-cards">
             <div className="contact-card">
-              {/* <img src={emailIcon} alt="Email" /> */}
-              <h4>Email</h4>
-              <p>contacto@tudominio.com</p>
+              <img src={mailIcon} alt="Correo electrónico" className="contact-icon" />
+              <div className='contact-card-text'>
+                <h4>Email</h4>
+                <p>contacto@tudominio.com</p>
+              </div>
             </div>
 
             <div className="contact-card">
-              {/* <img src={phoneIcon} alt="Teléfono" /> */}
-              
-              <h4>Teléfono</h4>
-              <p>600 123 456</p>
+              <img src={phoneIcon} alt="Teléfono" className="contact-icon" />
+              <div className='contact-card-text'>
+                <h4>Teléfono</h4>
+                <p>600 123 456</p>
+              </div>
             </div>
 
             <div className="contact-card">
-              {/* <img src={locationIcon} alt="Dirección" /> */}
-              <h4>Dirección</h4>
-              <p>Talavera de la Reina</p>
+              <img src={direccionIcon} alt="Dirección" className="contact-icon" />
+              <div className='contact-card-text'>
+                <h4>Dirección</h4>
+                <p>Talavera de la Reina</p>
+              </div>
             </div>
 
             <div className="contact-card">
-              {/* <img src={clockIcon} alt="Horario" /> */}
-              
-              <h4>Horario</h4>
-              <p>L–V · 9:00 – 18:00</p>
+              <img src={horarioIcon} alt="Horario" className="contact-icon" />
+              <div className='contact-card-text'>
+                <h4>Horario</h4>
+                <p>L–V · 9:00 – 18:00</p>
+              </div>
             </div>
           </div>
         </div>

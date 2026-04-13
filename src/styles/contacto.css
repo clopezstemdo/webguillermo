@@ -19,10 +19,11 @@
 /* COLUMNA IZQUIERDA */
 
 .contact-info {
-  flex: 1;
+  flex: 1.2;
   background-color: #f9fafb;
   padding: 2rem;
   border-radius: 10px;
+  min-width: 0;
 }
 
 .contact-info h2 {
@@ -39,16 +40,23 @@
 
 .contact-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
+  grid-auto-rows: 1fr;
 }
 
 
 .contact-card {
+  
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%; 
   background: #ffffff;
   border-radius: 10px;
   padding: 1.5rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  min-height: 96px;
   transition: transform 0.2s ease;
 }
 
@@ -56,23 +64,32 @@
   transform: translateY(-4px);
 }
 
-.contact-card img {
-  width: 26px;
-  height: auto;
-  margin-bottom: 0.8rem;
+/* Icono */
+.contact-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
 }
 
-.contact-card h4 {
+/* Texto */
+
+.contact-card-text{
+  flex: 1
+}
+
+.contact-card-text h4 {
+  margin: 0;
   font-size: 14px;
   font-weight: 600;
-  margin-bottom: 0.3rem;
   color: #111827;
 }
 
-.contact-card p {
+.contact-card-text p {
+  margin: 0;
   font-size: 14px;
   color: #555;
 }
+
 
 
 /* .contact-info p {
@@ -95,7 +112,7 @@
 
 /* COLUMNA DERECHA */
 .contact-form {
-  flex: 1;
+  flex: 0.8;
 }
 
 .contact-form h2 {
@@ -169,7 +186,7 @@
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 754px) {
 
   .contact-cards {
     grid-template-columns: 1fr;
