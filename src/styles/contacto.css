@@ -1,6 +1,6 @@
 /* CONTENEDOR GENERAL */
 .contact {
-  background-color: #f5f7fa;
+  background-color: #6c001d;
   padding: 4rem 1rem;
 }
 
@@ -40,9 +40,28 @@
 /* GRID: 2 arriba + 3 abajo */
 .contact-cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+}.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.5rem;
 }
+
+
+/* Primera fila: 2 tarjetas (ocupan media fila cada una) */
+.contact-card:nth-child(1),
+.contact-card:nth-child(2) {
+  grid-column: span 3;
+}
+
+/* Segunda fila: 3 tarjetas (ocupan un tercio cada una) */
+.contact-card:nth-child(3),
+.contact-card:nth-child(4),
+.contact-card:nth-child(5) {
+  grid-column: span 2;
+}
+
 
 /* TARJETA BASE */
 .contact-card {
