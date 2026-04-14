@@ -18,6 +18,7 @@ const Contact = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [showToast, setShowToast] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,7 +41,13 @@ const Contact = () => {
       "EFu53trEKlEOzmhHL"
     );
 
-    alert("Mensaje enviado correctamente ✅");
+    
+    setShowToast(true);
+
+    setTimeout(() => {
+      setShowToast(false);
+    }, 2000);
+
     setFormData({ name: "", phone: "", email: "", message: "" });
     setErrors({});
   };
@@ -186,10 +193,24 @@ const Contact = () => {
             {errors.message && <span className="error">{errors.message}</span>}
 
             <button type="submit">Enviar</button>
+            
+            {success && (
+              <p className="success-message">
+                ✅ Mensaje enviado correctamente. Te responderemos lo antes posible.
+              </p>
+            )}
+
           </form>
         </div>
 
       </div>
+      
+      {showToast && (
+        <div className="toast-success">
+          ✅ Mensaje enviado correctamente
+        </div>
+      )}
+
     </section>
   );
 };
