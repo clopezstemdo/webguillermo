@@ -6,29 +6,56 @@ import tiktokIcon from "../assets/icons/tiktok.svg"
 import instagramIcon from "../assets/icons/instagram.svg"
 import linkedinIcon from "../assets/icons/linkedin.svg"
 
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+
+
 const SobreMi = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const autoplay = Autoplay({
+    delay: 4000,               // ✅ movimiento constante
+    stopOnInteraction: false,
+    stopOnMouseEnter: true,
+  });
+
+  const [emblaRef] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "start",
+      skipSnaps: false,
+    },
+    [autoplay]
+  );
+
 
   const reviews = [
     {
       name: "Cliente 1",
       text: "Profesionalidad absoluta y acompañamiento constante durante todo el proceso.",
-      rating: 5,
     },
     {
       name: "Cliente 2",
       text: "Explicaciones claras, trato cercano y estrategia perfectamente definida.",
-      rating: 5,
     },
     {
       name: "Cliente 3",
       text: "Muy recomendable. Me sentí asesorado y respaldado desde el primer momento.",
-      rating: 4,
     },
     {
       name: "Cliente 4",
       text: "Gran conocimiento técnico y excelente comunicación.",
-      rating: 5,
+    },
+    {
+      name: "Cliente 5",
+      text: "Trato muy profesional y cercano. En todo momento sentí que entendía bien el proceso y las opciones disponibles."
+    },
+    {
+      name: "Cliente 6",
+      text: "Explicaciones claras y directas, sin tecnicismos innecesarios. Me ayudó a tomar decisiones con mayor seguridad."
+    },
+    {
+      name: "Cliente 7",
+      text: "Acompañamiento constante durante todo el procedimiento. Destaco la claridad y la implicación desde el primer contacto."
     },
   ];
 
@@ -111,24 +138,21 @@ const SobreMi = () => {
       </section>
 
       <section className="reviews-section">
-        <h2 className="reviews-title"></h2>
-
-        <div className="reviews-carousel">
-          {reviews.map((review, index) => (
-            <article className="review-card" key={index}>
-              <p className="review-text">“{review.text}”</p>
-
-              <div className="review-footer">
-                <span className="review-name">{review.name}</span>
-                <span className="review-rating">
-                  {"★".repeat(review.rating)}
-                  {"☆".repeat(5 - review.rating)}
-                </span>
+        <div className="embla" ref={emblaRef}>
+          <div className="embla__container">
+            {[...reviews, ...reviews].map((review, index) => (
+              <div className="embla__slide" key={index}>
+                <article className="review-card">
+                  <p className="review-text">“{review.text}”</p>
+                  <span className="review-name">{review.name}</span>
+                </article>
               </div>
-            </article>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
+
+
 
       <section className="about-social-links-section">
         <div className="about-social-links-inner">
