@@ -203,6 +203,20 @@
 }
 
 
+/* ICONO EN TARJETAS DE SERVICIO */
+.service-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 7px;
+}
+
+.service-icon img {
+  width: 80%;
+  height: auto;
+}
+
+
+
 .service-card:hover {
   background-color: #a8a8a8;        /* gris un poco más oscuro */
   transform: translateY(-6px);      /* se levanta */

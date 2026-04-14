@@ -7,6 +7,11 @@ import instagramIcon from "../assets/instagram.svg";
 import linkedinIcon from "../assets/linkedin.svg";
 import { NavLink } from "react-router-dom";
 
+import mazoIcon from "../assets/icons/mazo.svg";
+import escudoIcon from "../assets/icons/escudo.svg";
+import papelesIcon from "../assets/icons/papeles.svg";
+import avatarIcon from "../assets/icons/avatar.svg";
+
 
 export default function Home() {
   return (
@@ -105,25 +110,39 @@ export default function Home() {
 
           {/* COLUMNA DERECHA */}
           <div className="experience-cards">
+
             <div className="service-card">
+              <div className="service-icon">
+                <img src={mazoIcon} alt="Asesoría penal" />
+              </div>
               <h4>Asesoría penal</h4>
               <p>Asesoramiento en todas las fases del proceso penal.</p>
             </div>
 
             <div className="service-card">
+              <div className="service-icon">
+                <img src={escudoIcon} alt="Criminología" />
+              </div>
               <h4>Criminología</h4>
               <p>Análisis científico del comportamiento delictivo.</p>
             </div>
 
             <div className="service-card">
+              <div className="service-icon">
+                <img src={papelesIcon} alt="Informes periciales" />
+              </div>
               <h4>Informes periciales</h4>
               <p>Elaboración de informes criminológicos especializados.</p>
             </div>
 
             <div className="service-card">
+              <div className="service-icon">
+                <img src={avatarIcon} alt="Asesoramiento" />
+              </div>
               <h4>Asesoramiento</h4>
               <p>Orientación jurídica preventiva y consultiva.</p>
             </div>
+
           </div>
 
         </div>
