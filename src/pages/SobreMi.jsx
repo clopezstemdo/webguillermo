@@ -88,7 +88,7 @@ const SobreMi = () => {
       <section className="about-social-links-section">
         <div className="about-social-links-inner">
           <a
-            href="https://www.tiktok.com/@tucuenta"
+            href="https://www.tiktok.com/@guillermocriminologo"
             target="_blank"
             rel="noopener noreferrer"
             className="about-social-link tiktok"
@@ -106,7 +106,7 @@ const SobreMi = () => {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/tucuenta"
+            href="https://www.linkedin.com/in/guillermo-exp%C3%B3sito-crimin%C3%B3logo/"
             target="_blank"
             rel="noopener noreferrer"
             className="about-social-link linkedin"
