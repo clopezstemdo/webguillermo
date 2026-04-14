@@ -111,7 +111,7 @@ const SobreMi = () => {
       </section>
 
       <section className="reviews-section">
-        <h2 className="reviews-title">Opiniones de clientes</h2>
+        <h2 className="reviews-title"></h2>
 
         <div className="reviews-carousel">
           {reviews.map((review, index) => (
