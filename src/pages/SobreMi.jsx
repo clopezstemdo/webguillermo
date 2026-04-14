@@ -1,6 +1,10 @@
 import "../styles/sobre-mi.css";
 import image from "../assets/Guillermo.webp";
 import { useState } from "react";
+import video from "../assets/videos/video.MP4"
+import tiktokIcon from "../assets/icons/tiktok.svg"
+import instagramIcon from "../assets/icons/instagram.svg"
+import linkedinIcon from "../assets/icons/linkedin.svg"
 
 const SobreMi = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -41,13 +45,17 @@ const SobreMi = () => {
 
       <section className="about-section">
         <div className="about-section-inner">
-          <div className="about-with-social">
+          <div className="about-layout">
             {/* COLUMNA IZQUIERDA */}
             <div className="about-main">
               <section className="about-container">
-                {/* IMAGEN */}
-                <div className="about-image">
-                  <img src={image} alt="Foto del cliente" />
+                {/* Video */}
+                <div className="about-video">
+                  <video
+                    src={video}
+                    controls
+                    preload="metadata"
+                  />
                 </div>
 
                 {/* TEXTO */}
@@ -59,8 +67,8 @@ const SobreMi = () => {
                     Soy Guillermo Expósito, criminólogo especializado en el análisis estratégico de casos y el acompañamiento 
                     durante las diferentes fases de los procedimientos dentro del sistema judicial y penitenciario. 
                     Mi objetivo es acompañarte y asesorarte en estos momentos difíciles de entender y en los que hay tanto en juego. 
-
-                    A lo largo de mi trayectoria, he comprobado que el éxito en un caso va mucho más allá del estrado: 
+                  </p>
+                  <p>A lo largo de mi trayectoria, he comprobado que el éxito en un caso va mucho más allá del estrado: 
                     reside en la preparación previa, en la selección minuciosa de una estrategia y en tener a mis clientes 
                     informados en cada fase del proceso para que lo afronten de manera segura. Mi trabajo consiste en dotar 
                     a bufetes de abogados, empresas y particulares de las herramientas criminológicas necesarias para afrontar 
@@ -68,31 +76,46 @@ const SobreMi = () => {
                   </p>
 
                   <a href="/contacto" className="about-button">
-                    Contactar
+                    Contacta conmigo
                   </a>
                 </div>
               </section>
             </div>
-
-            {/* COLUMNA DERECHA */}
-            <div className="about-social">
-              <div className="about-social-box">
-                <iframe
-                  src="https://www.tiktok.com/embed/v2/7524993632424758550"
-                  width="325"
-                  height="580"
-                  allowFullScreen
-                  title="TikTok"
-                  style={{
-                    border: "none",
-                    borderRadius: "12px",
-                  }}
-                ></iframe>
-              </div>
-            </div>
           </div>
         </div>
       </section>
+
+      <section className="about-social-links-section">
+        <div className="about-social-links-inner">
+          <a
+            href="https://www.tiktok.com/@tucuenta"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="about-social-link tiktok"
+          >
+            <img src={tiktokIcon} alt="TikTok" />
+          </a>
+
+          <a
+            href="https://www.instagram.com/guillermoexpositocriminologo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="about-social-link instagram"
+          >
+            <img src={instagramIcon} alt="Instagram" />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/tucuenta"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="about-social-link linkedin"
+          >
+            <img src={linkedinIcon} alt="LinkedIn" />
+          </a>
+        </div>
+      </section>
+
       <section className="faq">
         <div className="faq-container">
           <h2>Preguntas frecuentes (FAQ)</h2>
