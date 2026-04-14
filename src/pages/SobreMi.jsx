@@ -8,6 +8,31 @@ import linkedinIcon from "../assets/icons/linkedin.svg"
 
 const SobreMi = () => {
   const [openIndex, setOpenIndex] = useState(null);
+
+  const reviews = [
+    {
+      name: "Cliente 1",
+      text: "Profesionalidad absoluta y acompañamiento constante durante todo el proceso.",
+      rating: 5,
+    },
+    {
+      name: "Cliente 2",
+      text: "Explicaciones claras, trato cercano y estrategia perfectamente definida.",
+      rating: 5,
+    },
+    {
+      name: "Cliente 3",
+      text: "Muy recomendable. Me sentí asesorado y respaldado desde el primer momento.",
+      rating: 4,
+    },
+    {
+      name: "Cliente 4",
+      text: "Gran conocimiento técnico y excelente comunicación.",
+      rating: 5,
+    },
+  ];
+
+
   const faqs = [
     {
       question: "¿Trabajas solo con abogados o también con particulares?",
@@ -82,6 +107,26 @@ const SobreMi = () => {
               </section>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="reviews-section">
+        <h2 className="reviews-title">Opiniones de clientes</h2>
+
+        <div className="reviews-carousel">
+          {reviews.map((review, index) => (
+            <article className="review-card" key={index}>
+              <p className="review-text">“{review.text}”</p>
+
+              <div className="review-footer">
+                <span className="review-name">{review.name}</span>
+                <span className="review-rating">
+                  {"★".repeat(review.rating)}
+                  {"☆".repeat(5 - review.rating)}
+                </span>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
