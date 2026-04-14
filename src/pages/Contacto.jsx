@@ -46,7 +46,7 @@ const Contact = () => {
 
     setTimeout(() => {
       setShowToast(false);
-    }, 2000);
+    }, 4000);
 
     setFormData({ name: "", phone: "", email: "", message: "" });
     setErrors({});
@@ -54,10 +54,33 @@ const Contact = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    if (!formData.name) newErrors.name = "El nombre es obligatorio";
-    if (!formData.phone) newErrors.phone = "El teléfono es obligatorio";
-    if (!formData.email) newErrors.email = "El email es obligatorio";
-    if (!formData.message) newErrors.message = "El mensaje es obligatorio";
+
+    // Nombre
+    if (!formData.name.trim()) {
+      newErrors.name = "El nombre es obligatorio";
+    }
+
+    // Teléfono: solo números y exactamente 9 dígitos
+    const phoneRegex = /^[0-9]{9}$/;
+    if (!formData.phone.trim()) {
+      newErrors.phone = "El teléfono es obligatorio";
+    } else if (!phoneRegex.test(formData.phone)) {
+      newErrors.phone = "El teléfono debe tener 9 dígitos numéricos";
+    }
+
+    // Email: formato válido básico
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      newErrors.email = "El email es obligatorio";
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Introduce un email válido";
+    }
+
+    // Mensaje
+    if (!formData.message.trim()) {
+      newErrors.message = "El mensaje es obligatorio";
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -167,8 +190,12 @@ const Contact = () => {
               type="tel"
               placeholder="Teléfono"
               value={formData.phone}
+              maxLength={9}
               onChange={(e) =>
-                setFormData({ ...formData, phone: e.target.value })
+                setFormData({
+                  ...formData,
+                  phone: e.target.value.replace(/\D/g, ""), // ✅ solo números
+                })
               }
             />
             {errors.phone && <span className="error">{errors.phone}</span>}
