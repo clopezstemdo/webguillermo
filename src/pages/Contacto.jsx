@@ -193,12 +193,6 @@ const Contact = () => {
             {errors.message && <span className="error">{errors.message}</span>}
 
             <button type="submit">Enviar</button>
-            
-            {success && (
-              <p className="success-message">
-                ✅ Mensaje enviado correctamente. Te responderemos lo antes posible.
-              </p>
-            )}
 
           </form>
         </div>
