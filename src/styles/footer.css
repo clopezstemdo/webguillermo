@@ -1,0 +1,91 @@
+/* FOOTER BASE */
+.footer {
+  background-color: #e6e0df;
+  padding-top: 60px;
+  font-size: 14px;
+  color: #111;
+}
+
+/* CONTENIDO */
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr 1.3fr auto;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+/* COLUMNAS */
+.footer-col h4 {
+  font-size: 15px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* IDENTIDAD */
+.footer-brand h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-brand p {
+  line-height: 1.6;
+  max-width: 380px;
+}
+
+/* LISTAS */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+/* ENLACES */
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* REDES */
+.footer-social {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.footer-social img {
+  width: 36px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.footer-social a:hover img {
+  transform: scale(1.1);
+}
+
+/* FOOTER INFERIOR */
+.footer-bottom {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
+}
