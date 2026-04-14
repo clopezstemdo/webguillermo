@@ -17,8 +17,6 @@
 }
 
 /* CONTENEDOR ABOUT + SOCIAL */
-
-
 .about-section {
   background-color: #f5f7fa;
   padding: 4rem 1rem;
@@ -31,7 +29,7 @@
 }
 
 
-.about-with-social {
+.about-layout {
   /* background-color: #f5f7fa; */
   /* max-width: 1400px; */
   display: flex;
@@ -41,13 +39,6 @@
   /* margin: 3rem auto 0; */
 }
 
-
-.about-main .about-container {
-  max-width: none;
-  width: 100%;
-}
-
-
 /* COLUMNA IZQUIERDA: ABOUT */
 .about-main {
   display: flex;
@@ -55,30 +46,11 @@
   min-width: 0;   /* 👈 evita bugs de flex */
 }
 
-/* COLUMNA DERECHA: TIKTOK */
-.about-social {
-  display: flex;
-  flex: 0.8;      /* 👈 ocupa solo lo necesario */
-  display: flex;
-  justify-content: center;
-}
-
-/* Caja blanca del TikTok (estilo card) */
-.about-social-box {
-  background: #ffffff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  max-width: 340px;
-  height: 100%;
-}
-
-
 .about-container {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
-  gap: 3rem;
+  column-gap: 3rem;
   align-items: center;
   background: #fff;
   padding: 3rem;
@@ -87,11 +59,27 @@
   height: 100%;
 }
 
-/* IMAGEN */
-.about-image img {
-  width: 300px;
+/* video */
+
+.about-video video {
+  width: 100%;
+  max-width: 300px;  
+  object-fit: contain;
   border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: block;
+
 }
+
+
+.about-video {
+  flex: 0 0 300px;
+}
+
+.about-content {
+  flex: 1;
+}
+
 
 /* TEXTO */
 .about-content h1 {
@@ -133,6 +121,75 @@
 .about-button:hover {
   background-color: #580118;
 }
+
+/* BOTONES RRSS */
+.about-social-links-section {
+  background-color: #f5f7fa;
+  /* padding: 1.5rem 1rem; */
+}
+
+.about-social-links-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Botón base */
+.about-social-link {
+  width: 108px;
+  height: 60px;
+
+  display: inline-flex;   /* ✅ más seguro que flex para <a> */
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border-radius: 10px;
+  text-decoration: none;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  padding: 0;             /* ✅ elimina padding heredado */
+  line-height: 1;
+
+}
+
+.about-social-link img {
+  width: 22px;
+  height: 22px;
+  display: block;
+
+}
+
+/* Hover general */
+.about-social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Colores por red (hover) */
+.about-social-link.tiktok:hover {
+  background-color: #8b0026;
+}
+
+.about-social-link.instagram:hover {
+  background-color: #8b0026;
+}
+
+.about-social-link.linkedin:hover {
+  background-color: #8b0026;
+}
+
+/* Icono en blanco */
+.about-social-link:hover img {
+  filter: brightness(0) invert(1);
+}
+
 
 /* FAQ SECTION */
 .faq {
@@ -203,48 +260,43 @@
 
 /* RESPONSIVE */
 @media (max-width: 1000px) {
-  .about-with-social {
+  .about-layout {
     flex-direction: column;
     /* justify-content: center; */
     /* align-items: flex-start; */
     align-items: stretch;
   }
 
-  .about-main,.about-social {
+  .about-main{
     display: block;
   }
-
   
-  .about-container,
-  .about-social-box {
-    height: auto;
-  }
-
-
-  .about-social {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-    margin-top: 2rem;
-  }
-
-  .about-social-box{
-    margin: 0 auto;
-  }
-
   .about-container {
     flex-direction: column;
     text-align: center;
-  }
-
-  .about-image img {
-    width: 200px;
+    height: auto;
   }
 
   
+  .about-video video {
+    max-width: 100%;
+  }
+
+  .about-content {
+    order: 1;   /* ✅ primero el texto */
+  }
+
+  .about-video {
+    order: 2;   /* ✅ luego el vídeo */
+    padding-top: 2rem;
+  }
+
+  .about-social-links-inner {
+    gap: 1.2rem;
+  }
+
   .faq {
-    margin-top: 3rem;
+    padding-top: 3rem;
   }
   
   .faq-container {
