@@ -19,7 +19,7 @@
   
     opacity: 1;
   transform: translateY(15px);
-  animation: heroBtnIn 0.75s ease forwards;
+  animation: heroBtnIn 1s ease forwards;
 }
 
 .hero-tag {

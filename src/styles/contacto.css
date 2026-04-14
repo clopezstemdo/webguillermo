@@ -19,6 +19,9 @@
   display: flex;
   align-items: flex-start; /* 🔑 CLAVE */
 
+        opacity: 0;
+  transform: translateY(15px);
+  animation: heroBtnIn 2s ease forwards;
 
 }
 
@@ -82,6 +85,10 @@
               transform 0.3s ease,
               box-shadow 0.3s ease;
   cursor: pointer;
+
+      opacity: 1;
+  transform: translateY(15px);
+  animation: heroBtnIn 1s ease forwards;
 }
 
 .contact-card:hover {

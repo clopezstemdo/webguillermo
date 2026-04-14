@@ -2,8 +2,10 @@
 .servicios-hero {
   background-color: #6c001d;
   color: white;
-  padding: 80px 0;
+  padding: 40px 0;
   overflow: hidden;
+
+  
 }
 
 .servicios-hero h1 {
@@ -18,6 +20,11 @@
   transition:
     transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.6s ease;
+    
+    opacity: 0;
+  transform: translateY(15px);
+  animation: heroBtnIn 2s ease forwards;
+
 }
 
 .servicios-bloque:hover {

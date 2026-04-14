@@ -2,8 +2,11 @@
 .sobre-mi-hero {
   background-color: #6c001d; /* mismo color que servicios */
   color: white;
-  padding: 80px 0;
+  padding: 40px 0;
   overflow: hidden;
+
+   
+
 }
 
 .sobre-mi-hero h1 {
@@ -13,13 +16,17 @@
 
 .sobre-mi-hero p {
   font-size: 16px;
-  max-width: 700px;
+  max-width: 1000px;
 }
 
 /* CONTENEDOR ABOUT + SOCIAL */
 .about-section {
   background-color: #f5f7fa;
   padding: 4rem 1rem;
+
+      opacity: 0;
+  transform: translateY(15px);
+  animation: heroBtnIn 2s ease forwards;
 }
 
 
