@@ -129,6 +129,87 @@
   background-color: #580118;
 }
 
+/* ===== REVIEWS ===== */
+
+.reviews-section {
+  background-color: #f5f7fa;
+  padding: 3rem 1rem;
+}
+
+.reviews-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+
+/* Carrusel */
+.reviews-carousel {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+
+  scroll-snap-type: x mandatory;
+}
+
+/* Card */
+.review-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.8rem;
+
+  min-width: 280px;
+  max-width: 320px;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Texto */
+.review-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+  margin-bottom: 1.2rem;
+}
+
+/* Footer */
+.review-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.review-name {
+  font-weight: 600;
+  color: #6c001d;
+}
+
+.review-rating {
+  color: #f59e0b;
+  font-size: 0.95rem;
+}
+
+/* Quitar scrollbar feo */
+.reviews-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.reviews-carousel::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+
 /* BOTONES RRSS */
 .about-social-links-section {
   background-color: #f5f7fa;
