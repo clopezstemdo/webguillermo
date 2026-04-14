@@ -21,9 +21,6 @@
     transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.6s ease;
     
-    opacity: 0;
-  transform: translateY(15px);
-  animation: heroBtnIn 2s ease forwards;
 
 }
 
@@ -133,6 +130,7 @@
 }
 
 /* ANIMACIÓN DE ENTRADA POTENTE */
+
 .animar-scroll {
   opacity: 0;
   transform: translateY(100px) scale(0.92);

@@ -1,62 +1,44 @@
 import "../styles/servicios.css";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 export default function Servicios() {
-  useEffect(() => {
-    const elementos = document.querySelectorAll(".animar-scroll");
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            entry.target.style.transitionDelay = `${index * 150}ms`;
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
-    elementos.forEach(el => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <>
-      <section className="servicios-hero animar-scroll">
+      <section className="servicios-hero">
         <div className="container">
           <h1>Servicios</h1>
           <p>
-            Intervención profesional en criminología, derecho penal y ámbitos
-            relacionados, con un enfoque técnico, humano y riguroso.
+            Intervención profesional en criminología, derecho penal y
+            ámbitos relacionados, con un enfoque técnico, humano y riguroso.
           </p>
         </div>
       </section>
 
-      <section className="servicios-bloque animar-scroll">
+      <section className="servicios-bloque">
         <div className="container">
           <h2>Área Penal y Criminológica</h2>
           <p className="servicios-intro">
-            Estrategia, rigor científico y defensa de tus derechos en el proceso penal.
+            Estrategia, rigor científico y defensa de tus derechos en el
+            proceso penal.
           </p>
+
           <p>
             Enfrentarse a un procedimiento penal genera un alto grado de
             incertidumbre. Mi labor consiste en dotar a tu caso de una base
-            técnica y estratégica, acompañándote en cada fase del proceso para
-            que tomes decisiones informadas y seguras.
+            técnica y estratégica, acompañándote en cada fase del proceso
+            para que tomes decisiones informadas y seguras.
           </p>
+
           <ul className="servicios-lista">
             <li>
-              <strong>Asesoramiento y acompañamiento judicial:</strong> Te guío
-              durante todo el procedimiento, traduciendo el lenguaje jurídico y
-              preparándote para cada intervención.
+              <strong>Asesoramiento y acompañamiento judicial:</strong> Te
+              guío durante todo el procedimiento, traduciendo el lenguaje
+              jurídico y preparándote para cada intervención.
             </li>
             <li>
-              <strong>Informes criminológicos periciales:</strong> Elaboración de
-              dictámenes técnicos para la defensa o la acusación, con enfoque
-              científico.
+              <strong>Informes criminológicos periciales:</strong>
+              Elaboración de dictámenes técnicos para la defensa o la
+              acusación, con enfoque científico.
             </li>
             <li>
               <strong>Gestión post‑condena:</strong> Suspensión de condena,
@@ -66,17 +48,19 @@ export default function Servicios() {
         </div>
       </section>
 
-      <section className="servicios-bloque servicios-alt animar-scroll">
+      <section className="servicios-bloque servicios-alt">
         <div className="container">
           <h2>Facilitación Judicial</h2>
           <p className="servicios-intro">
             Garantizando el acceso a la justicia en igualdad de condiciones.
           </p>
+
           <p>
             El entorno judicial puede resultar hostil, especialmente para
             personas mayores o con discapacidad. La figura del facilitador
             asegura la comprensión real del proceso.
           </p>
+
           <ul className="servicios-lista">
             <li>
               <strong>Adaptación y apoyo cognitivo:</strong> Adecuación del
@@ -90,21 +74,20 @@ export default function Servicios() {
         </div>
       </section>
 
-      <section className="servicios-bloque animar-scroll">
+      <section className="servicios-bloque">
         <div className="container">
           <h2>Área Penitenciaria</h2>
-          <p className="servicios-intro">
-            El cumplimiento de una condena no implica renunciar a la defensa.
-          </p>
+
           <p>
             El cumplimiento de una condena no implica renunciar a la defensa.
             Trabajo para garantizar tus derechos y optimizar el proceso de
             reinserción.
           </p>
+
           <ul className="servicios-lista">
             <li>
-              <strong>Clasificación y progresiones de grado:</strong> Acceso al
-              tercer grado y régimen abierto.
+              <strong>Clasificación y progresiones de grado:</strong> Acceso
+              al tercer grado y régimen abierto.
             </li>
             <li>
               <strong>Beneficios penitenciarios:</strong> Permisos, libertad
@@ -118,17 +101,19 @@ export default function Servicios() {
         </div>
       </section>
 
-      <section className="servicios-bloque servicios-alt animar-scroll">
+      <section className="servicios-bloque servicios-alt">
         <div className="container">
           <h2>Justicia de Menores</h2>
-          <p className="servicios-intro">
+
+          <p>
             Intervención especializada con enfoque educativo y preventivo,
             priorizando la inserción social del menor.
           </p>
+
           <ul className="servicios-lista">
             <li>
-              <strong>Acompañamiento integral:</strong> Asesoramiento al menor y a
-              la familia desde el inicio del proceso.
+              <strong>Acompañamiento integral:</strong> Asesoramiento al
+              menor y a la familia desde el inicio del proceso.
             </li>
             <li>
               <strong>Informes de valoración del riesgo:</strong> Análisis del
@@ -142,30 +127,32 @@ export default function Servicios() {
         </div>
       </section>
 
-      <section className="servicios-bloque animar-scroll">
+      <section className="servicios-bloque">
         <div className="container">
           <h2>Área de Extranjería</h2>
-          <p className="servicios-intro">
+
+          <p>
             Protección legal y búsqueda de soluciones para regularizar tu
             situación administrativa en España.
           </p>
+
           <ul className="servicios-lista">
             <li>
               <strong>Recursos contra órdenes de expulsión:</strong> Análisis
               exhaustivo del expediente y defensa administrativa.
             </li>
             <li>
-              <strong>Regularización extraordinaria:</strong> Gestión integral
-              de procedimientos de arraigo.
+              <strong>Regularización extraordinaria:</strong> Gestión
+              integral de procedimientos de arraigo.
             </li>
           </ul>
         </div>
       </section>
 
-      <section className="servicios-cta animar-scroll">
+      <section className="servicios-cta">
         <div className="container">
           <h2>¿Hablamos de tu caso?</h2>
-          <Link to="/contacto" className="btn-principal">
+          <Link to="/contacto" className="btn-primary">
             Solicitar consulta
           </Link>
         </div>
@@ -173,4 +160,3 @@ export default function Servicios() {
     </>
   );
 }
-``
