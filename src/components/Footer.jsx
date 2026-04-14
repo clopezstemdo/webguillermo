@@ -9,8 +9,8 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-content">
 
-        {/* COLUMNA 1 - IDENTIDAD */}
-        <div className="footer-col footer-brand">
+        {/* IZQUIERDA */}
+        <div className="footer-brand">
           <h3>Guillermo Expósito Criminólogo</h3>
           <p>
             Asesoramiento profesional, cercano y personalizado, garantizando la
@@ -18,62 +18,56 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* COLUMNA 2 - SERVICIOS */}
-        <div className="footer-col">
+        {/* CENTRO */}
+        <div className="footer-services">
           <h4>Servicios</h4>
-          <ul>
-            <li>Área Penal y Criminológica</li>
-            <li>Facilitación Judicial</li>
-            <li>Área Penitenciaria</li>
-            <li>Justicia de Menores</li>
-            <li>Área de Extranjería</li>
-          </ul>
+          
+            <div className="footer-services-grid">
+              <ul>
+                <li>Área Penal y Criminológica</li>
+                <li>Facilitación Judicial</li>
+              </ul>
+              <ul>
+                <li>Justicia de Menores</li>
+                <li>Área de Extranjería</li>
+              </ul>
+            </div>
+
+            <ul className="footer-services-center">
+              <li>Área Penitenciaria</li>
+            </ul>
+
         </div>
 
-        {/* COLUMNA 3 - CONTACTO */}
-        <div className="footer-col">
+        {/* DERECHA */}
+        <div className="footer-contact">
           <h4>Contacto</h4>
           <p>
-            <a href="tel:+34624969220">+34 624 96 92 20</a>
-          </p>
-          <p>
+            <a href="tel:+34624969220">+34 624 96 92 20</a><br />
             <a href="mailto:guillermoexpositocriminologo@gmail.com">
               guillermoexpositocriminologo@gmail.com
             </a>
           </p>
-        </div>
 
-        {/* COLUMNA 4 - REDES */}
-        <div className="footer-col footer-social">
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={instagramIcon} alt="Instagram" />
-          </a>
-          <a
-            href="https://www.tiktok.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={tiktokIcon} alt="TikTok" />
-          </a>
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={linkedinIcon} alt="LinkedIn" />
-          </a>
+          <div className="footer-social">
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+              <img src={instagramIcon} alt="Instagram" />
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noreferrer">
+              <img src={tiktokIcon} alt="TikTok" />
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+              <img src={linkedinIcon} alt="LinkedIn" />
+            </a>
+          </div>
         </div>
 
       </div>
 
-      {/* FOOTER INFERIOR */}
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Guillermo Expósito · Criminólogo</p>
       </div>
     </footer>
   );
 }
+``
