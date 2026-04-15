@@ -257,8 +257,6 @@
 }
 
 
-
-
 /* BOTONES RRSS */
 .about-social-links-section {
   background-color: #f5f7fa;
@@ -293,7 +291,6 @@
 
   padding: 0;             /* ✅ elimina padding heredado */
   line-height: 1;
-
 }
 
 .about-social-link img {
@@ -364,7 +361,7 @@
   background: none;
   border: none;
   text-align: left;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   cursor: pointer;
   padding: 0;
@@ -392,7 +389,7 @@
   margin-top: 0.8rem;
   color: #444;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 /* RESPONSIVE */

@@ -79,7 +79,6 @@
 }
 
 
-
 .hero-content {
   display: flex;
   align-items: center;
@@ -404,6 +403,12 @@
   .hero-text {
     max-width: 100%;
   }
+
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+
 
   .experience-layout {
     flex-direction: column;
