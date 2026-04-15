@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "../styles/header-footer.css";
 import logo from "../assets/logoGuillermo.svg"
+import fotoGuillermo from "../assets/Guillermo.webp"
 import { useState } from "react";
 
 export default function Navbar() {
@@ -17,15 +18,37 @@ export default function Navbar() {
           <button className="menu-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Abrir Menú">☰</button>
+
+          {menuOpen && (
+            <div
+              className="menu-overlay"
+              onClick={() => setMenuOpen(false)}
+            />
+          )}
+
+
           <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
             
             <div className="mobile-menu-header">
               
-              <img
+              {/* <img
                 src={logo}
                 alt="Guillermo Expósito Criminólogo"
                 className="mobile-logo"
-              />
+              /> */}
+              {/* icono whatsapp */}
+              
+              <div className="mobile-profile">
+                  <img
+                    src={fotoGuillermo}   // o una imagen específica de perfil
+                    alt="Guillermo Expósito"
+                    className="mobile-avatar"
+                  />
+                  <div className="mobile-profile-text">
+                    <span className="mobile-name">Guillermo Expósito Criminólogo</span>
+                  </div>
+              </div>
+
 
               <button
                 className="close-menu"
