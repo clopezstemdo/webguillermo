@@ -59,21 +59,24 @@ export default function Navbar() {
               </button>
             </div>
 
-            <NavLink to="/" end onClick={() => setMenuOpen(false)}>
-              Inicio
-            </NavLink>
+            <div className="mobile-menu-body">
 
-            <NavLink to="/servicios" onClick={() => setMenuOpen(false)}>
-              Servicios
-            </NavLink>
+              <NavLink to="/" end onClick={() => setMenuOpen(false)}>
+                Inicio
+              </NavLink>
 
-            <NavLink to="/sobre-mi" onClick={() => setMenuOpen(false)}>
-              Sobre mí
-            </NavLink>
+              <NavLink to="/servicios" onClick={() => setMenuOpen(false)}>
+                Servicios
+              </NavLink>
 
-            <NavLink to="/contacto" onClick={() => setMenuOpen(false)}>
-              Contacto
-            </NavLink>
+              <NavLink to="/sobre-mi" onClick={() => setMenuOpen(false)}>
+                Sobre mí
+              </NavLink>
+
+              <NavLink to="/contacto" onClick={() => setMenuOpen(false)}>
+                Contacto
+              </NavLink>
+            </div>
           </nav>
         </div>
       </div>
