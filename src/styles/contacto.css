@@ -14,12 +14,9 @@
   padding: 3rem;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  
   display: flex;
   align-items: flex-start; /* 🔑 CLAVE */
-
-        opacity: 0;
+  opacity: 0;
   transform: translateY(15px);
   animation: heroBtnIn 2s ease forwards;
 
@@ -31,20 +28,15 @@
   background-color: #f9fafb;
   padding: 2rem;
   border-radius: 10px;
-
-    margin-top: 0;
-
+  margin-top: 0;
 }
 
 .contact-info h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #111827;
-
-    margin-top: 0;
-      margin-bottom: 1.8rem;
-
-
+  margin-top: 0;
+  margin-bottom: 1.8rem;
 }
 
 
@@ -131,11 +123,8 @@
 
 /* ═══════════ COLUMNA DERECHA (FORMULARIO) ═══════════ */
 .contact-form {
-
   flex: 0.8;
-  padding: 2rem;        /* ✅ MISMO padding que .contact-info */
-  
-
+  padding: 2rem;    
 }
 
 .contact-form h2 {
@@ -157,6 +146,7 @@
   border-radius: 6px;
   border: 1px solid #ccc;
   transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: Arial, Helvetica, sans-serif; /*Cambio de fuente ------------------------------------------------------------ */
 }
 
 .contact-form input:focus,
