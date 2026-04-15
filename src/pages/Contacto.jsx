@@ -173,7 +173,7 @@ const Contact = () => {
 
         {/* COLUMNA DERECHA */}
         <div className="contact-form">
-          <h2>Envíanos tu consulta</h2>
+          <h2>Envíame tu consulta</h2>
 
           <form onSubmit={handleSubmit}>
             <input

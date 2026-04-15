@@ -113,11 +113,10 @@ const SobreMi = () => {
                 {/* TEXTO */}
                 <div className="about-content">
                   <h2>Guillermo Expósito</h2>
-                  <span className="about-role">Profesional del sector</span>
+                  <span className="about-role"></span>
 
                   <p>
-                    Soy Guillermo Expósito, criminólogo especializado en el análisis estratégico de casos y el acompañamiento 
-                    durante las diferentes fases de los procedimientos dentro del sistema judicial y penitenciario. 
+                    Soy criminólogo especializado en el análisis estratégico de casos y en el acompañamiento durante las distintas fases de los procedimientos dentro del sistema judicial y penitenciario. 
                     Mi objetivo es acompañarte y asesorarte en estos momentos difíciles de entender y en los que hay tanto en juego. 
                   </p>
                   <p>A lo largo de mi trayectoria, he comprobado que el éxito en un caso va mucho más allá del estrado: 
