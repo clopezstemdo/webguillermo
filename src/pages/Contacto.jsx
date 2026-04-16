@@ -85,7 +85,7 @@ const Contact = () => {
 
     // Política de privacidad
     if (!acceptedPrivacy) {
-      newErrors.privacy = "Debes aceptar la Política de Privacidad";
+      newErrors.privacy = "Debes autorizar el tratamiento de tus datos para poder enviar el formulario";
     }
 
     setErrors(newErrors);
@@ -235,9 +235,9 @@ const Contact = () => {
                   onChange={(e) => setAcceptedPrivacy(e.target.checked)}
                 />
                 <span>
-                  He leído y acepto la{" "}
+                  Autorizo a Guillermo Expósito Criminólogo a tratar mis datos para contactar conmigo, conforme a la información básica y adicional sobre {" "}
                   <a href="/avisolegal" target="_blank" rel="noopener noreferrer">
-                    Política de Privacidad
+                    protección de datos.
                   </a>
                 </span>
               </label>
