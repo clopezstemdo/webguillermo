@@ -19,6 +19,7 @@ const Contact = () => {
 
   const [errors, setErrors] = useState({});
   const [showToast, setShowToast] = useState(false);
+  const [acceptedPrivacy, setAcceptedPrivacy] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -49,6 +50,7 @@ const Contact = () => {
     }, 4000);
 
     setFormData({ name: "", phone: "", email: "", message: "" });
+    setAcceptedPrivacy(false);
     setErrors({});
   };
 
@@ -79,6 +81,11 @@ const Contact = () => {
     // Mensaje
     if (!formData.message.trim()) {
       newErrors.message = "El mensaje es obligatorio";
+    }
+
+    // Política de privacidad
+    if (!acceptedPrivacy) {
+      newErrors.privacy = "Debes aceptar la Política de Privacidad";
     }
 
     setErrors(newErrors);
@@ -218,6 +225,27 @@ const Contact = () => {
               }
             />
             {errors.message && <span className="error">{errors.message}</span>}
+
+
+            <div className="form-privacy">
+              <label className="privacy-label">
+                <input
+                  type="checkbox"
+                  checked={acceptedPrivacy}
+                  onChange={(e) => setAcceptedPrivacy(e.target.checked)}
+                />
+                <span>
+                  He leído y acepto la{" "}
+                  <a href="/avisolegal" target="_blank" rel="noopener noreferrer">
+                    Política de Privacidad
+                  </a>
+                </span>
+              </label>
+
+              {errors.privacy && (
+                <span className="error">{errors.privacy}</span>
+              )}
+            </div>
 
             <button type="submit">Enviar</button>
 

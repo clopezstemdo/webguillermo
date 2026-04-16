@@ -209,6 +209,37 @@
   animation: toastIn 0.3s ease, toastOut 0.3s ease 1.7s forwards;
 }
 
+/* CHECKBOX PRIVACIDAD */
+.form-privacy {
+  margin: 22px 0 12px;
+}
+
+.privacy-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.privacy-label input {
+  margin-top: 3px;
+  accent-color: #6c001d; /* color del check */
+}
+
+.privacy-label a {
+  color: #6c001d;
+  text-decoration: underline;
+}
+
+.privacy-error {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #b00020;
+}
+
+
 /* Animaciones */
 @keyframes toastIn {
   from {
