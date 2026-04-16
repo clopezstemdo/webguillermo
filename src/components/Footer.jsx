@@ -55,13 +55,13 @@ export default function Footer() {
 
 
           <div className="footer-social">
-            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/guillermoexpositocriminologo/" target="_blank" rel="noreferrer">
               <img src={instagramIcon} alt="Instagram" />
             </a>
-            <a href="https://www.tiktok.com/" target="_blank" rel="noreferrer">
+            <a href="https://www.tiktok.com/@guillermocriminologo" target="_blank" rel="noreferrer">
               <img src={tiktokIcon} alt="TikTok" />
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/guillermo-expósito-criminólogo" target="_blank" rel="noreferrer">
               <img src={linkedinIcon} alt="LinkedIn" />
             </a>
           </div>
