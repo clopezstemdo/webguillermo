@@ -133,3 +133,25 @@
 }
 
 
+/* ENLACES LEGALES */
+.footer-legal {
+  margin-top: 14px;
+  text-align: center;
+  font-weight: 600; /* 👈 negrita */
+  font-size: 13px;
+}
+
+.footer-legal a {
+  color: #111;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
+}
+
+.footer-legal span {
+  margin: 0 6px;
+  color: #555;
+}
+

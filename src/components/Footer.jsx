@@ -4,6 +4,10 @@ import instagramIcon from "../assets/icons/instagram.svg";
 import tiktokIcon from "../assets/icons/tiktok.svg";
 import linkedinIcon from "../assets/icons/linkedin.svg";
 
+
+import { Link } from "react-router-dom";
+
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -49,6 +53,7 @@ export default function Footer() {
             </a>
           </p>
 
+
           <div className="footer-social">
             <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
               <img src={instagramIcon} alt="Instagram" />
@@ -60,6 +65,12 @@ export default function Footer() {
               <img src={linkedinIcon} alt="LinkedIn" />
             </a>
           </div>
+
+          {/* ENLACES LEGALES */}
+          <div className="footer-legal">
+            <Link to="/avisolegal">Aviso legal</Link>
+          </div>
+
         </div>
 
       </div>
