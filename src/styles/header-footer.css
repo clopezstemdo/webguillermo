@@ -33,16 +33,14 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--header-padding-y) var(--header-padding-x);
-  font-family: "Times New Roman", Times, serif;
-}
+  font-family: "Montserrat", sans-serif;}
 
 /* TÍTULO */
 .site-title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: normal;
   color: #000;
-  font-family: "Times New Roman", Times, serif;
-}
+  font-family: "Montserrat", sans-serif;}
 
 /* NAV */
 
@@ -152,7 +150,7 @@
 
   .nav-links a {
     margin-left: 0;
-    font-size: 18px;
+    font-size: 20px;
     /* cuando esta en rojo */
     /* color: white; */
 
