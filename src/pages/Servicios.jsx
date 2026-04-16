@@ -1,7 +1,29 @@
 import "../styles/servicios.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Servicios() {
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".animar-scroll");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // ✅ solo una vez
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <section className="servicios-hero">
@@ -14,7 +36,7 @@ export default function Servicios() {
         </div>
       </section>
 
-      <section className="servicios-bloque">
+      <section className="servicios-bloque animar-scroll">
         <div className="container">
           <h2>Área Penal y Criminológica</h2>
           <p className="servicios-intro">
@@ -48,7 +70,7 @@ export default function Servicios() {
         </div>
       </section>
 
-      <section className="servicios-bloque servicios-alt">
+      <section className="servicios-bloque servicios-alt animar-scroll">
         <div className="container">
           <h2>Facilitación Judicial</h2>
           <p className="servicios-intro">
@@ -74,7 +96,7 @@ export default function Servicios() {
         </div>
       </section>
 
-      <section className="servicios-bloque">
+      <section className="servicios-bloque animar-scroll">
         <div className="container">
           <h2>Área Penitenciaria</h2>
 
@@ -101,7 +123,7 @@ export default function Servicios() {
         </div>
       </section>
 
-      <section className="servicios-bloque servicios-alt">
+      <section className="servicios-bloque servicios-alt animar-scroll">
         <div className="container">
           <h2>Justicia de Menores</h2>
 
@@ -127,7 +149,7 @@ export default function Servicios() {
         </div>
       </section>
 
-      <section className="servicios-bloque">
+      <section className="servicios-bloque animar-scroll">
         <div className="container">
           <h2>Área de Extranjería</h2>
 
