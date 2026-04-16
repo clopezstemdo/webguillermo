@@ -1,6 +1,6 @@
 import "../styles/home.css";
 
-    import heroImage from "../assets/hero-image.jpg";
+import heroImage from "../assets/hero-image.jpg";
 
 import tiktokIcon from "../assets/tiktok.svg";
 import instagramIcon from "../assets/instagram.svg";
@@ -16,44 +16,44 @@ import avatarIcon from "../assets/icons/avatar.svg";
 export default function Home() {
   return (
     <>
-      <section className="hero">
-        <div className="container">
-          <div className="hero-content">
+    <section className="hero">
+      <div className="container">
+        <div className="hero-content">
 
-            {/* COLUMNA TEXTO */}
-            <div className="hero-text-block">
-              <span className="hero-tag">
-                ⚖️ Asesoría en Criminología y Derecho Penal
-              </span>
+          {/* COLUMNA TEXTO */}
+          <div className="hero-text-block">
+            <span className="hero-tag">
+              ⚖️ Asesoría en Criminología y Derecho Penal
+            </span>
 
-              <h1 className="hero-title">
-                La sentencia de un juicio no solo depende de las leyes, sino de cómo se
-                argumenta la verdad.
-              </h1>
+            <h1 className="hero-title">
+              La sentencia de un juicio no solo depende de las leyes, sino de cómo se
+              argumenta la verdad.
+            </h1>
 
-              <p className="hero-text">
-                Como criminólogo especializado en el ámbito penal, ofrezco un enfoque
-                integral que combina el análisis criminológico con la defensa jurídica.
-              </p>
+            <p className="hero-text">
+              Como criminólogo especializado en el ámbito penal, ofrezco un enfoque
+              integral que combina el análisis criminológico con la defensa jurídica.
+            </p>
 
-              <div className="hero-buttons">
-                <NavLink to="/contacto" className="btn-primary">
-                  Consulta gratuita
-                </NavLink>
-                <NavLink to="/servicios" className="btn-secondary">
-                  Ver servicios
-                </NavLink>
-              </div>
+            <div className="hero-buttons">
+              <NavLink to="/contacto" className="btn-primary">
+                Consulta gratuita
+              </NavLink>
+              <NavLink to="/servicios" className="btn-secondary">
+                Ver servicios
+              </NavLink>
             </div>
-
-            {/* COLUMNA IMAGEN */}
-            <div className="hero-image-wrapper">
-              <img src={heroImage} alt="Imagen representativa criminología" />
-            </div>
-
           </div>
+
+          {/* COLUMNA IMAGEN */}
+          <div className="hero-image-wrapper">
+            <img src={heroImage} alt="Imagen representativa criminología" />
+          </div>
+
         </div>
-      </section>
+      </div>
+    </section>
 
       {/*
        <section className="home-statement">
