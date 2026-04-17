@@ -6,6 +6,7 @@ import tiktokIcon from "../assets/tiktok.svg";
 import instagramIcon from "../assets/instagram.svg";
 import linkedinIcon from "../assets/linkedin.svg";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
 
 import mazoIcon from "../assets/icons/mazo.svg";
 import escudoIcon from "../assets/icons/escudo.svg";
@@ -14,46 +15,71 @@ import avatarIcon from "../assets/icons/avatar.svg";
 
 
 export default function Home() {
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".animar-scroll");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // solo una vez
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
-    <section className="hero">
-      <div className="container">
-        <div className="hero-content">
+      <section className="hero">
+        <div className="container">
+          <div className="hero-content">
 
-          {/* COLUMNA TEXTO */}
-          <div className="hero-text-block">
-            <span className="hero-tag">
-              ⚖️ Asesoría en Criminología y Derecho Penal
-            </span>
+            {/* COLUMNA TEXTO */}
+            <div className="hero-text-block">
+              <span className="hero-tag">
+                ⚖️ Asesoría en Criminología y Derecho Penal
+              </span>
 
-            <h1 className="hero-title">
-              La sentencia de un juicio no solo depende de las leyes, sino de cómo se
-              argumenta la verdad.
-            </h1>
+              <h1 className="hero-title">
+                La sentencia de un juicio no solo depende de las leyes, sino de cómo se
+                argumenta la verdad.
+              </h1>
 
-            <p className="hero-text">
-              Como criminólogo especializado en el ámbito penal, ofrezco un enfoque
-              integral que combina el análisis criminológico con la defensa jurídica.
-            </p>
+              <p className="hero-text">
+                Como criminólogo especializado en el ámbito penal, ofrezco un enfoque
+                integral que combina el análisis criminológico con la defensa jurídica.
+              </p>
 
-            <div className="hero-buttons">
-              <NavLink to="/contacto" className="btn-primary">
-                Consulta gratuita
-              </NavLink>
-              <NavLink to="/servicios" className="btn-secondary">
-                Ver servicios
-              </NavLink>
+              <div className="hero-buttons">
+                <div className="hero-btn-wrap animar-btn">
+                  <NavLink to="/contacto" className="btn-primary">
+                    Consulta gratuita
+                  </NavLink>
+                </div>
+                <div className="hero-btn-wrap animar-btn delay-2">
+                  <NavLink to="/servicios" className="btn-secondary">
+                    Ver servicios
+                  </NavLink>
+                </div>
+              </div>
             </div>
-          </div>
 
-          {/* COLUMNA IMAGEN */}
-          <div className="hero-image-wrapper">
-            <img src={heroImage} alt="Imagen representativa criminología" />
-          </div>
+            {/* COLUMNA IMAGEN */}
+            <div className="hero-image-wrapper">
+              <img src={heroImage} alt="Imagen representativa criminología" />
+            </div>
 
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/*
        <section className="home-statement">
@@ -82,7 +108,7 @@ export default function Home() {
         <div className="container experience-layout">
 
           {/* COLUMNA IZQUIERDA */}
-          <div className="experience-text">
+          <div className="experience-text animar-scroll from-left">
             <h2>Experiencia en Criminología y Derecho Penal</h2>
 
             <p>
@@ -107,7 +133,7 @@ export default function Home() {
           </div>
 
           {/* COLUMNA DERECHA */}
-          <div className="experience-cards">
+          <div className="experience-cards animar-scroll from-right">
 
             <div className="service-card">
               <div className="service-icon">
@@ -147,14 +173,14 @@ export default function Home() {
       </section>
 
       <section className="social-section">
-        <h2>Mis Publicaciones</h2>
+        <h2 className="animar-scroll from-bottom">Mis Publicaciones</h2>
 
-        <p className="social-description">
+        <p className="social-description animar-scroll from-bottom">
           Sígueme en redes sociales para mantenerte actualizado sobre temas
           de criminología, derecho penal, casos de interés y análisis jurídico.
         </p>
 
-        <div className="social-grid">
+        <div className="social-grid animar-scroll from-bottom">
 
           <div className="social-card">
 
