@@ -17,9 +17,9 @@
   padding: 90px 0;
   margin: 0;  
   
-    opacity: 1;
+    /* opacity: 1;
   transform: translateY(15px);
-  animation: heroBtnIn 1s ease forwards;
+  animation: heroBtnIn 1s ease forwards; */
 }
 
 .hero-tag {
@@ -123,9 +123,9 @@
   display: flex;
   justify-content: flex-end;
 
-  opacity: 0;
+  /* opacity: 0;
   transform: translateY(15px);
-  animation: heroBtnIn 0.75s ease forwards;
+  animation: heroBtnIn 0.75s ease forwards; */
   
   
 }
@@ -158,21 +158,6 @@
 }
 
 /* ---------------- HERO BUTTON ANIMATION IN ---------------- */
-.hero-buttons a {
-  opacity: 0;
-  /* transform: translateY(10px); */
-  animation: heroBtnIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  will-change: transform;
-}
-
-/* Delay escalonado */
-.hero-buttons a:nth-child(1) {
-  animation-delay: 0.3s;
-}
-
-.hero-buttons a:nth-child(2) {
-  animation-delay: 0.45s;
-}
 
 @keyframes heroBtnIn {
   from {
@@ -186,30 +171,6 @@
   }
 }
 
-/* .btn-primary {
-  transition: 
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background-color 0.25s ease;
-} */
-
-/* .btn-primary:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 24px 26px rgba(0, 0, 0, 0.22);
-} */
-
-/* .btn-secondary {
-  transition: 
-    transform 0.25s ease,
-    background-color 0.25s ease,
-    color 0.25s ease;
-}
-
-.btn-secondary:hover {
-  background-color: rgb(136, 136, 136);
-  color: #000000;
-  transform: translateY(-2px) scale(1.02);
-} */
 
 /* -------- ACTIVE (CLICK) -------- */
 .hero-buttons a:active {
