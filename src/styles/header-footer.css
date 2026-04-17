@@ -1,30 +1,264 @@
+
+
+:root {
+  --header-padding-y: 26px;
+  --header-padding-x: 12px;
+}
+
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+
+/* ===================== */
+/* HEADER */
+/* ===================== */
+
 .site-header {
   background: white;
-  margin: 0;              /* ← CLAVE */
+  margin: 0;
   padding: 0;
+  border-bottom: 2px solid #b9b9b9;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
 
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;     /* ← el espacio correcto va aquí */
-  font-family: "Times New Roman", Times, serif;
-}
+  padding: var(--header-padding-y) var(--header-padding-x);
+  font-family: "Montserrat", sans-serif;}
 
+/* TÍTULO */
 .site-title {
-  font-size: 20px;
-  font-weight: normal;   /* ← SIN negrita */
-  color: #000;           /* ← negro, no gris */
-  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+  font-weight: normal;
+  color: #000;
+  font-family: "Montserrat", sans-serif;}
+
+/* NAV */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
-.site-header nav a {
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
   margin-left: 30px;
   text-decoration: none;
   color: #000;
   font-weight: normal;
+  position: relative;
 }
+
+.mobile-menu-header {
+    display: none;
+  }
+
+/* HOVER */
+.nav-links a:hover {
+  color: #000;
+}
+
+/* LINK ACTIVO (página actual) */
+.nav-links a.active {
+  border-bottom: 2px solid #000;
+  padding-bottom: 4px;
+}
+
+/* MOVIL */
+@media (max-width: 768px) {
+  
+  
+  :root {
+    --header-padding-y: 18px;
+    --header-padding-x: 12px;
+  }
+
+  /* Mostrar hamburguesa */
+  .menu-toggle {
+    display: block;
+  }
+
+  .close-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+  }
+  /* OVERLAY */
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 900;
+  }
+
+  /* PANEL DEL MENÚ */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 350px;
+    height: 100vh;
+    /* Fondo Menu Deslizante */
+    /* background-color: #6c001d;#8b0026 ------------------------------------------*/ 
+
+    /* background-color: white;*/
+
+    /* display: flex; */
+    flex-direction: column;
+    align-items: stretch;
+    /*padding: 20px;
+    gap: 20px; */
+
+    
+    padding: 0;                
+    background: transparent;
+
+
+    transform: translateX(-100%);          /* ✅ oculto */
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);              /* ✅ visible */
+  }
+
+  
+/* MENÚ visible */
+  /* .nav-links.open {
+    left: 0;
+  } */
+
+  .nav-links a {
+    margin-left: 0;
+    font-size: 20px;
+    /* cuando esta en rojo */
+    /* color: white; */
+
+    /* cuando esta en blanco */
+    color: black;
+  }
+  .nav-links a.active {
+    /* cuando esta en rojo */
+    /* border-bottom: 2px solid white; */
+
+    /* cuando esta en blanco */
+    border-bottom: 2px solid black;
+  }
+  /* HEADER */
+  .mobile-menu-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* cuando esta en rojo */
+    /* margin-bottom: 10px; */
+
+    /* cuando esta en blanco { */
+    background-color: #6c001d;
+    padding: var(--header-padding-y) var(--header-padding-x);
+
+    /* clave para que el rojo llegue a los bordes */
+    /* margin: -20px -20px 10px -20px; */
+    /* } */
+
+    /* cuando esta en rojo */
+    /* padding-bottom: 10px; */
+
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+
+  }
+
+  
+  .mobile-logo {
+    width: 120px;
+    height: auto;
+  }
+
+  .mobile-profile-text {
+    color: white;
+  }
+
+  .mobile-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .mobile-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .mobile-profile-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .mobile-name {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .mobile-role {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+  }
+
+  
+ /* ========= BODY BLANCO ========= */
+  .mobile-menu-body {
+    width: 100%;
+    background-color: #ffffff;
+
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mobile-menu-body a {
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .mobile-menu-body a.active {
+    border-bottom: 2px solid #000;
+    width: fit-content;
+  }
+
+}
+
+
+/* ===================== */
+/* FOOTER */
+/* ===================== */
 
 .site-footer {
   font-family: "Times New Roman", Times, serif;

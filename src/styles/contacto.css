@@ -1,0 +1,298 @@
+/* ═══════════ CONTENEDOR GENERAL ═══════════ */
+.contact {
+  background-color: #6c001d;
+  padding: 4rem 1rem;
+}
+
+/* ═══════════ CAJA PRINCIPAL ═══════════ */
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: flex-start; /* 🔑 CLAVE */
+  opacity: 0;
+  transform: translateY(15px);
+  animation: heroBtnIn 2s ease forwards;
+
+}
+
+/* ═══════════ COLUMNA IZQUIERDA ═══════════ */
+.contact-info {
+  flex: 1.2;
+  background-color: #f9fafb;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 0;
+}
+
+.contact-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1.8rem;
+}
+
+
+.contact-info h2,
+.contact-form h2 {
+  margin-top: 0;
+}
+
+.contact-form h2 {
+  margin-bottom: 1.8rem;
+}
+
+
+.contact-intro {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* ═══════════ GRID 2x3 (CONTACT CARDS) ═══════════ */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 1.5rem;
+}
+
+/* ═══════════ TARJETAS ═══════════ */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: background-color 0.3s ease,
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
+  cursor: pointer;
+
+      opacity: 1;
+  transform: translateY(15px);
+  animation: heroBtnIn 1s ease forwards;
+}
+
+.contact-card:hover {
+  background-color: #8b0026;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto en hover */
+.contact-card:hover h4,
+.contact-card:hover p {
+  color: #ffffff;
+}
+
+/* Iconos en hover */
+.contact-card:hover .contact-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* ═══════════ ICONOS ═══════════ */
+.contact-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+/* ═══════════ TEXTO DE TARJETAS ═══════════ */
+.contact-card-text h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.contact-card-text p {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ═══════════ COLUMNA DERECHA (FORMULARIO) ═══════════ */
+.contact-form {
+  flex: 0.8;
+  padding: 2rem;    
+}
+
+.contact-form h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ═══════════ FORMULARIO ═══════════ */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: Arial, Helvetica, sans-serif; /*Cambio de fuente ------------------------------------------------------------ */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #8b0026;
+  box-shadow: 0 0 0 2px rgba(139, 0, 38, 0.2);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ═══════════ ERRORES ═══════════ */
+.error {
+  font-size: 13px;
+  color: #b00020;
+  margin-top: -6px;
+}
+
+/* ═══════════ BOTÓN ═══════════ */
+.contact-form button {
+  margin-top: 1rem;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #8b0026;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ═══════════ TOAST ÉXITO ═══════════ */
+.toast-success {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 9999;
+
+  background-color: #0f5132;
+  color: #ffffff;
+  padding: 0.9rem 1.4rem;
+  border-radius: 8px;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+
+  animation: toastIn 0.3s ease, toastOut 0.3s ease 1.7s forwards;
+}
+
+/* CHECKBOX PRIVACIDAD */
+.form-privacy {
+  margin: 8px 0 12px;
+}
+
+.privacy-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.privacy-label input {
+  margin-top: 3px;
+  accent-color: #6c001d; /* color del check */
+}
+
+.privacy-label a {
+  color: #6c001d;
+  text-decoration: underline;
+}
+
+.privacy-error {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #b00020;
+}
+
+.form-privacy .error {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+
+
+/* Animaciones */
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes toastOut {
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px)
+  }
+}
+
+
+/* ═══════════ RESPONSIVE ═══════════ */
+@media (max-width: 1100px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  
+  .contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .toast-success {
+    bottom: 20px;
+    width: calc(100% - 40px);
+    text-align: center;
+  }
+}
+

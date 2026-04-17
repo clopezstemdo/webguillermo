@@ -1,0 +1,156 @@
+.footer {
+  background-color: #f0f0f0;
+  color: #111;
+  padding-top: 30px;
+  font-size: 14px;
+}
+
+/* GRID PRINCIPAL */
+.footer-content {
+  display: grid;
+  grid-template-columns: 2.2fr 1.6fr 1.6fr;
+  gap: 60px;
+  padding-bottom: 50px;
+}
+
+
+.footer-brand {
+  text-align: left;
+}
+
+/* IZQUIERDA */
+.footer-brand h3 {
+font-family: "Montserrat", sans-serif;  font-size: 24px;
+  margin-bottom: 16px;
+  
+  font-weight: normal;
+
+}
+
+.footer-brand p {
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+
+.footer-brand h3,
+.footer-brand p {
+  margin-left: 0;
+}
+
+
+/* CENTRO */
+.footer-services h4,
+.footer-contact h4 {
+  font-size: 15px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.footer-services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.footer-services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-services li {
+  margin-bottom: 8px;
+}
+
+
+.footer-services-center {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+
+/* DERECHA */
+.footer-contact p {
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.footer-contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+/* REDES ABAJO */
+.footer-social {
+
+  display: flex;
+  justify-content: center;   /* ✅ CLAVE */
+  gap: 18px;
+  margin-top: 16px;
+
+}
+
+.footer-social img {
+
+  width: 30px;
+  height: 30px;
+
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.footer-social a:hover img {
+  transform: scale(1.1);
+}
+
+/* BANDA INFERIOR */
+.footer-bottom {
+  
+  padding: 20px 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ENLACES LEGALES */
+.footer-legal {
+  margin-top: 14px;
+  text-align: center;
+  font-weight: 600; /* 👈 negrita */
+  font-size: 13px;
+}
+
+.footer-legal a {
+  color: #111;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
+}
+
+.footer-legal span {
+  margin: 0 6px;
+  color: #555;
+}
+

@@ -1,0 +1,91 @@
+/* Animación base usada en todo el site */
+@keyframes fadeUpBlur {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+
+/* HERO AVISO LEGAL – alineado con SERVICIOS */
+.legal-hero {
+  background-color: #6c001d;
+  color: white;
+  padding: 40px 5rem; /* 👈 mismo padding lateral */
+  
+
+}
+
+.legal-hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.legal-hero p {
+  font-size: 16px;
+  max-width: 1000px; /* igual que servicios-intro visual */
+}
+
+.aviso-legal {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  line-height: 1.7;
+  color: #1f2933;
+
+    
+  opacity: 1;
+  animation: fadeUpBlur 1.2s ease forwards;
+  animation-delay: 0s;
+
+
+}
+
+.aviso-legal h1 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: #111827;
+}
+
+.aviso-legal h2 {
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: #111827;
+}
+
+.aviso-legal p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+@media (max-width: 600px) {
+  .aviso-legal {
+    padding: 3rem 1.25rem;
+  }
+
+  .aviso-legal h1 {
+    font-size: 2rem;
+  }
+}
+
+.servicios-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.18),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none; /* 🔑 CLAVE */
+}

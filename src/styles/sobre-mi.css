@@ -1,0 +1,453 @@
+/* HERO SOBRE MI */
+.sobre-mi-hero {
+  background-color: #6c001d; /* mismo color que servicios */
+  color: white;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.sobre-mi-hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.sobre-mi-hero p {
+  font-size: 16px;
+  max-width: 1000px;
+}
+
+/* CONTENEDOR ABOUT + SOCIAL */
+.about-section {
+  background-color: #f5f7fa;
+  padding: 4rem 1rem;
+
+      opacity: 0;
+  transform: translateY(15px);
+  animation: heroBtnIn 2s ease forwards;
+}
+
+
+.about-section-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+.about-layout {
+  /* background-color: #f5f7fa; */
+  /* max-width: 1400px; */
+  display: flex;
+  gap: 3rem;
+  /* align-items: flex-start; */
+  align-items: stretch;
+  /* margin: 3rem auto 0; */
+}
+
+/* COLUMNA IZQUIERDA: ABOUT */
+.about-main {
+  display: flex;
+  flex: 2.2;      /* 👈 ocupa la mayor parte */
+  min-width: 0;   /* 👈 evita bugs de flex */
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  column-gap: 3rem;
+  align-items: center;
+  background: #fff;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+
+/* video */
+
+.about-video video {
+  width: 100%;
+  max-width: 300px;  
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: block;
+
+}
+
+
+.about-video {
+  flex: 0 0 300px;
+}
+
+.about-content {
+  flex: 1;
+}
+
+
+/* TEXTO */
+.about-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.about-role {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: #8b0026;
+  font-weight: 500;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* BOTÓN */
+.about-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  background-color: #8b0026;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.about-button:hover {
+  background-color: #580118;
+}
+
+/* ===== REVIEWS ===== */
+
+.reviews-section {
+  background-color: #f5f7fa;
+  /* padding-top: 1rem; */
+}
+
+.reviews-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+
+/* Carrusel */
+/* .reviews-carousel {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+
+  scroll-snap-type: x mandatory;
+} */
+
+/* Card */
+.review-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.8rem;
+
+  min-width: 280px;
+  max-width: 320px;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Texto */
+.review-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+  margin-bottom: 1.2rem;
+}
+
+/* Footer */
+.review-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.review-name {
+  font-weight: 600;
+  color: #6c001d;
+}
+
+/* Quitar scrollbar feo */
+.reviews-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.reviews-carousel::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+/* ===== REVIEWS / EMBLA ===== */
+
+.reviews-section {
+  background-color: #f5f7fa;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.reviews-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.embla {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 360px;
+  padding-right: 2rem;
+}
+
+.review-card {
+  height: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.review-name {
+  font-weight: 600;
+  color: #6c001d;
+}
+
+
+/* BOTONES RRSS */
+.about-social-links-section {
+  background-color: #f5f7fa;
+  /* padding: 1.5rem 1rem; */
+}
+
+.about-social-links-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Botón base */
+.about-social-link {
+  width: 108px;
+  height: 60px;
+
+  display: inline-flex;   /* ✅ más seguro que flex para <a> */
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border-radius: 10px;
+  text-decoration: none;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  padding: 0;             /* ✅ elimina padding heredado */
+  line-height: 1;
+}
+
+.about-social-link img {
+  width: 22px;
+  height: 22px;
+  display: block;
+
+}
+
+/* Hover general */
+.about-social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Colores por red (hover) */
+.about-social-link.tiktok:hover {
+  background-color: #8b0026;
+}
+
+.about-social-link.instagram:hover {
+  background-color: #8b0026;
+}
+
+.about-social-link.linkedin:hover {
+  background-color: #8b0026;
+}
+
+/* Icono en blanco */
+.about-social-link:hover img {
+  filter: brightness(0) invert(1);
+}
+
+
+/* FAQ SECTION */
+.faq {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #f5f7fa;
+}
+
+.faq-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.faq h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+/* Cada fila */
+.faq-item {
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Botón pregunta */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  color: #222;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Flecha */
+.faq-question::after {
+  content: "▾";
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+/* Cuando esté abierta */
+.faq-item.open .faq-question::after {
+  transform: rotate(180deg);
+}
+
+/* Respuesta */
+.faq-answer {
+  margin-top: 0.8rem;
+  color: #444;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .about-layout {
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+    align-items: stretch;
+  }
+
+  .about-main{
+    display: block;
+  }
+  
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+
+  
+  .about-video video {
+    max-width: 100%;
+  }
+
+  .about-content {
+    order: 1;   /* ✅ primero el texto */
+  }
+
+  .about-video {
+    order: 2;   /* ✅ luego el vídeo */
+    padding-top: 2rem;
+  }
+
+  .about-social-links-inner {
+    gap: 1.2rem;
+  }
+
+  .faq {
+    padding-top: 3rem;
+  }
+  
+  .faq-container {
+    padding: 2rem;
+  }
+
+  .faq h2 {
+    font-size: 1.5rem;
+  }
+
+  .faq-item {
+    padding: 1rem;
+  }
+
+  .faq-question {
+    font-size: 15px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+  }
+
+}
