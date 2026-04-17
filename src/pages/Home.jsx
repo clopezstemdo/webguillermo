@@ -43,7 +43,7 @@ export default function Home() {
           <div className="hero-content">
 
             {/* COLUMNA TEXTO */}
-            <div className="hero-text-block animar-scroll from-left">
+            <div className="hero-text-block animar-scroll from-bottom">
               <span className="hero-tag">
                 ⚖️ Asesoría en Criminología y Derecho Penal
               </span>
@@ -73,7 +73,7 @@ export default function Home() {
             </div>
 
             {/* COLUMNA IMAGEN */}
-            <div className="hero-image-wrapper animar-scroll from-right">
+            <div className="hero-image-wrapper animar-scroll from-bottom">
               <img src={heroImage} alt="Imagen representativa criminología" />
             </div>
 
