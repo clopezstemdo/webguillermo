@@ -1,21 +1,69 @@
-/* Reset básico */
+/* =========================
+   FUENTES LOCALES (Montserrat)
+   ========================= */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/assets/fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/assets/fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================
+   RESET
+   ========================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* =========================
+   FUENTE BASE (NO TOCAR)
+   ========================= */
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /* 👈 se queda */
+  color: #1f2933;
+  line-height: 1.6;
 }
 
-/* Contenedor estándar para el contenido */
+/* Contenedor estándar */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
+/* =========================
+   ANIMACIONES
+   ========================= */
 
 @keyframes fadeUpBlur {
   from {
@@ -29,6 +77,3 @@ body {
     filter: blur(0);
   }
 }
-
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");

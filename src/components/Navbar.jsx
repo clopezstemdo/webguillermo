@@ -31,13 +31,6 @@ export default function Navbar() {
             
             <div className="mobile-menu-header">
               
-              {/* <img
-                src={logo}
-                alt="Guillermo Expósito Criminólogo"
-                className="mobile-logo"
-              /> */}
-              {/* icono whatsapp */}
-              
               <div className="mobile-profile">
                   <img
                     src={fotoGuillermo}   // o una imagen específica de perfil

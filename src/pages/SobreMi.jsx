@@ -126,7 +126,7 @@ const SobreMi = () => {
                     sus procedimientos con la máxima garantía de éxito. 
                   </p>
 
-                  <a href="/contacto" className="about-button">
+                  <a href="/contacto" className="btn-primary btn-red btn-soft-hover about-button">
                     Contacta conmigo
                   </a>
                 </div>
