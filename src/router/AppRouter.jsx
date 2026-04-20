@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom"
+import { useLocation } from "react-router-dom";
 
 import Home from "../pages/Home";
 import Contacto from "../pages/Contacto";
@@ -8,9 +9,10 @@ import Social from "../pages/social";
 import AvisoLegal from "../pages/AvisoLegal";
 
 const AppRouter = () => {
+  const location = useLocation();
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home key={location.key}/>} />
       <Route path="/contacto" element={<Contacto />} />
       <Route path="/servicios" element={<Servicios />} />
       <Route path="/sobre-mi" element={<SobreMi />} />
