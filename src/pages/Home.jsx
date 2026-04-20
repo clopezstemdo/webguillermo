@@ -6,7 +6,8 @@ import instagramIcon from "../assets/instagram.svg";
 import linkedinIcon from "../assets/linkedin.svg";
 
 import { NavLink } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 import mazoIcon from "../assets/icons/mazo.svg";
 import escudoIcon from "../assets/icons/escudo.svg";
@@ -14,44 +15,105 @@ import papelesIcon from "../assets/icons/papeles.svg";
 import avatarIcon from "../assets/icons/avatar.svg";
 
 export default function Home() {
+  const location = useLocation();
+  const [heroVisible, setHeroVisible] = useState(false);
+  const [experienceVisible, setExperienceVisible] = useState(false);
+  const [socialVisible, setSocialVisible] = useState(false);
 
+  // useEffect(() => {
+    
+  //   setHomeVisible(true);
+  // },[]);
   
-  useEffect(() => {
-    const heroEls = document.querySelectorAll(".hero .animar-scroll");
 
-    // Fuerza el cambio de estado en el siguiente frame
+// ANIMACON SECCION HERO  
+  useEffect(() => {
+    setHeroVisible(false);
+
     requestAnimationFrame(() => {
-      heroEls.forEach(el => el.classList.add("visible"));
+      setHeroVisible(true);
     });
-  }, []);
+  }, [location.pathname]);
 
+// ANIMACON SECCION EXPERIENCE
 
   useEffect(() => {
-    const elements = document.querySelectorAll(".animar-scroll");
+    const onScroll = () => {
+      const experience = document.querySelector(".experience-section");
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { 
-        threshold: 0.1,
-        rootMargin: "0px 0px -10% 0px"
+      if (!experience || experienceVisible) return;
+
+      const rect = experience.getBoundingClientRect();
+
+      if (rect.top < window.innerHeight * 0.85) {
+        setExperienceVisible(true);
       }
-    );
+    };
 
-    elements.forEach((el) => {
-      if(!el.closest(".hero")){
-        observer.observe(el);
+    window.addEventListener("scroll", onScroll);
+    onScroll(); // por si ya está visible
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [experienceVisible]);
+
+// ANIMACON SECCION SOCIAL
+
+  useEffect(() => {
+    const onScroll = () => {
+      const social = document.querySelector(".social-section");
+
+      if (!social || socialVisible) return;
+
+      const rect = social.getBoundingClientRect();
+
+      if (rect.top < window.innerHeight * 0.85) {
+        setSocialVisible(true);
       }
-    });
+    };
 
-    return () => observer.disconnect();
-  }, []);
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [socialVisible]);
+
+
+  // useEffect(() => {
+  //   const heroEls = document.querySelectorAll(".hero .animar-scroll");
+
+  //   // Fuerza el cambio de estado en el siguiente frame
+  //   requestAnimationFrame(() => {
+  //     heroEls.forEach(el => el.classList.add("visible"));
+  //   });
+  // }, []);
+
+
+  // useEffect(() => {
+  //   const elements = document.querySelectorAll(".animar-scroll");
+
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           entry.target.classList.add("visible");
+  //           observer.unobserve(entry.target);
+  //         }
+  //       });
+  //     },
+  //     { 
+  //       threshold: 0.1,
+  //       rootMargin: "0px 0px -10% 0px"
+  //     }
+  //   );
+
+  //   elements.forEach((el) => {
+  //     if(!el.closest(".hero")){
+  //       observer.observe(el);
+  //     }
+  //   });
+
+  //   return () => observer.disconnect();
+  // }, []);
 
   return (
     <>
@@ -59,7 +121,7 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-content">
           {/* TEXTO HERO */}
-          <div className="hero-text-block animar-scroll from-bottom">
+          <div className={`hero-text-block animar-scroll from-bottom ${heroVisible ? "visible":""}`}>
             <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal</span>
 
             <h1 className="hero-title">
@@ -82,7 +144,7 @@ export default function Home() {
           </div>
 
           {/* IMAGEN HERO */}
-          <div className="hero-image-wrapper animar-scroll from-bottom">
+          <div className={`hero-image-wrapper animar-scroll from-bottom ${heroVisible?"visible":""}`}>
             <img src={heroImage} alt="Imagen representativa criminología" />
           </div>
         </div>
@@ -91,7 +153,7 @@ export default function Home() {
       {/* EXPERIENCIA */}
       <section className="experience-section">
         <div className="container experience-layout">
-          <div className="experience-text animar-scroll from-left">
+          <div className={`experience-text animar-scroll from-left ${experienceVisible ? "visible" : ""}`}>
             <h2>Experiencia en Criminología y Derecho Penal</h2>
             <p>
               Como criminólogo especializado en el ámbito penal, ofrezco un enfoque integral que combina el análisis criminológico con la defensa jurídica. Mi formación me permite comprender no solo los aspectos legales, sino también los factores criminológicos que intervienen en cada caso.
@@ -105,7 +167,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="experience-cards animar-scroll from-right">
+          <div className={`experience-cards animar-scroll from-right ${experienceVisible ? "visible" : ""}`}>
             <div className="service-card">
               <div className="service-icon">
                 <img src={mazoIcon} alt="Asesoría penal" />
@@ -142,7 +204,7 @@ export default function Home() {
       </section>
 
       {/* SOCIAL */}
-      <section className="social-section animar-scroll from-bottom">
+      <section className={`social-section animar-scroll from-bottom ${socialVisible ? "visible" : ""}`}>
         <h2>Mis publicaciones</h2>
         <p className="social-description">
           Sígueme en redes sociales para mantenerte actualizado
