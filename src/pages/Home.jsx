@@ -15,105 +15,33 @@ import papelesIcon from "../assets/icons/papeles.svg";
 import avatarIcon from "../assets/icons/avatar.svg";
 
 export default function Home() {
-  const location = useLocation();
-  const [heroVisible, setHeroVisible] = useState(false);
-  const [experienceVisible, setExperienceVisible] = useState(false);
-  const [socialVisible, setSocialVisible] = useState(false);
+  useEffect(() => {
+    const elements = document.querySelectorAll(".animar-scroll");
 
-  // useEffect(() => {
     
-  //   setHomeVisible(true);
-  // },[]);
-  
+    // ✅ Reset visual (MUY IMPORTANTE en SPA)
+    elements.forEach(el => el.classList.remove("visible"));
 
-// ANIMACON SECCION HERO  
-  useEffect(() => {
-    setHeroVisible(false);
 
-    requestAnimationFrame(() => {
-      setHeroVisible(true);
-    });
-  }, [location.pathname]);
-
-// ANIMACON SECCION EXPERIENCE
-
-  useEffect(() => {
-    const onScroll = () => {
-      const experience = document.querySelector(".experience-section");
-
-      if (!experience || experienceVisible) return;
-
-      const rect = experience.getBoundingClientRect();
-
-      if (rect.top < window.innerHeight * 0.85) {
-        setExperienceVisible(true);
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -10% 0px"
       }
-    };
+    );
 
-    window.addEventListener("scroll", onScroll);
-    onScroll(); // por si ya está visible
+    elements.forEach(el => observer.observe(el));
 
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [experienceVisible]);
-
-// ANIMACON SECCION SOCIAL
-
-  useEffect(() => {
-    const onScroll = () => {
-      const social = document.querySelector(".social-section");
-
-      if (!social || socialVisible) return;
-
-      const rect = social.getBoundingClientRect();
-
-      if (rect.top < window.innerHeight * 0.85) {
-        setSocialVisible(true);
-      }
-    };
-
-    window.addEventListener("scroll", onScroll);
-    onScroll();
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [socialVisible]);
-
-
-  // useEffect(() => {
-  //   const heroEls = document.querySelectorAll(".hero .animar-scroll");
-
-  //   // Fuerza el cambio de estado en el siguiente frame
-  //   requestAnimationFrame(() => {
-  //     heroEls.forEach(el => el.classList.add("visible"));
-  //   });
-  // }, []);
-
-
-  // useEffect(() => {
-  //   const elements = document.querySelectorAll(".animar-scroll");
-
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           entry.target.classList.add("visible");
-  //           observer.unobserve(entry.target);
-  //         }
-  //       });
-  //     },
-  //     { 
-  //       threshold: 0.1,
-  //       rootMargin: "0px 0px -10% 0px"
-  //     }
-  //   );
-
-  //   elements.forEach((el) => {
-  //     if(!el.closest(".hero")){
-  //       observer.observe(el);
-  //     }
-  //   });
-
-  //   return () => observer.disconnect();
-  // }, []);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -122,7 +50,7 @@ export default function Home() {
         <div className="container hero-content">
           {/* TEXTO HERO */}
           <div className="hero-text-block animar-hero">
-            <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal Prueba_v1</span>
+            <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal Prueba_v2</span>
 
             <h1 className="hero-title">
               La sentencia de un juicio no solo depende de las leyes, sino de cómo se argumenta la verdad.
@@ -153,7 +81,7 @@ export default function Home() {
       {/* EXPERIENCIA */}
       <section className="experience-section">
         <div className="container experience-layout">
-          <div className={`experience-text animar-scroll from-left ${experienceVisible ? "visible" : ""}`}>
+          <div className="experience-text animar-scroll from-left">
             <h2>Experiencia en Criminología y Derecho Penal</h2>
             <p>
               Como criminólogo especializado en el ámbito penal, ofrezco un enfoque integral que combina el análisis criminológico con la defensa jurídica. Mi formación me permite comprender no solo los aspectos legales, sino también los factores criminológicos que intervienen en cada caso.
@@ -167,7 +95,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className={`experience-cards animar-scroll from-right ${experienceVisible ? "visible" : ""}`}>
+          <div className="experience-cards animar-scroll from-right">
             <div className="service-card">
               <div className="service-icon">
                 <img src={mazoIcon} alt="Asesoría penal" />
@@ -204,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* SOCIAL */}
-      <section className={`social-section animar-scroll from-bottom ${socialVisible ? "visible" : ""}`}>
+      <section className="social-section animar-scroll">
         <h2>Mis publicaciones</h2>
         <p className="social-description">
           Sígueme en redes sociales para mantenerte actualizado
