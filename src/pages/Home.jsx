@@ -121,8 +121,8 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-content">
           {/* TEXTO HERO */}
-          <div className={`hero-text-block animar-scroll from-bottom ${heroVisible ? "visible":""}`}>
-            <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal Prueba</span>
+          <div className="hero-text-block animar-hero">
+            <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal Prueba_v1</span>
 
             <h1 className="hero-title">
               La sentencia de un juicio no solo depende de las leyes, sino de cómo se argumenta la verdad.
@@ -144,7 +144,7 @@ export default function Home() {
           </div>
 
           {/* IMAGEN HERO */}
-          <div className={`hero-image-wrapper animar-scroll from-bottom ${heroVisible?"visible":""}`}>
+          <div className="hero-image-wrapper animar-hero">
             <img src={heroImage} alt="Imagen representativa criminología" />
           </div>
         </div>
