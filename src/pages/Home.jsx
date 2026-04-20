@@ -40,16 +40,15 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-content">
           {/* TEXTO HERO */}
-          <div className="hero-text-block animar-scroll from-left">
-            <span className="hero-tag">⚖️ Asesoría en Criminología</span>
+          <div className="hero-text-block animar-scroll from-bottom">
+            <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal</span>
 
             <h1 className="hero-title">
-              Asesoría en Criminología y Derecho Penal
+              La sentencia de un juicio no solo depende de las leyes, sino de cómo se argumenta la verdad.
             </h1>
 
             <p className="hero-text">
-              La sentencia de un juicio no solo depende de las leyes, sino de cómo
-              se argumenta la verdad.
+              Como críminólogo especializado en derecho penal, ofrezco un enfoque integral que combina el análisis cirminológico con la defensa jurídica.
             </p>
 
             <div className="hero-buttons">
@@ -64,7 +63,7 @@ export default function Home() {
           </div>
 
           {/* IMAGEN HERO */}
-          <div className="hero-image-wrapper animar-scroll from-right">
+          <div className="hero-image-wrapper animar-scroll from-bottom">
             <img src={heroImage} alt="Imagen representativa criminología" />
           </div>
         </div>
@@ -76,11 +75,10 @@ export default function Home() {
           <div className="experience-text animar-scroll from-left">
             <h2>Experiencia en Criminología y Derecho Penal</h2>
             <p>
-              Como criminólogo especializado en el ámbito penal, ofrezco un
-              enfoque integral que combina el análisis criminológico con la
-              defensa jurídica.
+              Como criminólogo especializado en el ámbito penal, ofrezco un enfoque integral que combina el análisis criminológico con la defensa jurídica. Mi formación me permite comprender no solo los aspectos legales, sino también los factores criminológicos que intervienen en cada caso.
             </p>
-
+            <p>
+              Mi compromiso es brindar asesoramiento profesional, cercano y personalizado, garantizando la mejor defensa de tus intereses dentro del marco legal vigente.            </p>
             <ul className="experience-list">
               <li>Análisis criminológico del caso.</li>
               <li>Defensa personalizada y estratégica.</li>
