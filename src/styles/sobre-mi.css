@@ -111,19 +111,22 @@
 
 /* BOTÓN */
 .about-button {
-  display: inline-block;
   margin-top: 1rem;
-  padding: 0.7rem 1.2rem;
-  background-color: #8b0026;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.2s;
 }
 
-.about-button:hover {
-  background-color: #580118;
+.btn-red {
+  background-color: #6c001d;
+  color: #ffffff;
+}
+
+.btn-soft-hover:hover {
+  transform: scale(1.02); /* 👈 MUY IMPORTANTE */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+
+.btn-red:hover {
+  background-color: #8b0026;
 }
 
 /* ===== REVIEWS ===== */
