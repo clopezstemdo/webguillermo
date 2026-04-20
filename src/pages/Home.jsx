@@ -14,6 +14,18 @@ import papelesIcon from "../assets/icons/papeles.svg";
 import avatarIcon from "../assets/icons/avatar.svg";
 
 export default function Home() {
+
+  
+  useEffect(() => {
+    const heroEls = document.querySelectorAll(".hero .animar-scroll");
+
+    // Fuerza el cambio de estado en el siguiente frame
+    requestAnimationFrame(() => {
+      heroEls.forEach(el => el.classList.add("visible"));
+    });
+  }, []);
+
+
   useEffect(() => {
     const elements = document.querySelectorAll(".animar-scroll");
 
@@ -26,10 +38,17 @@ export default function Home() {
           }
         });
       },
-      { threshold: 0.2 }
+      { 
+        threshold: 0.1,
+        rootMargin: "0px 0px -10% 0px"
+      }
     );
 
-    elements.forEach((el) => observer.observe(el));
+    elements.forEach((el) => {
+      if(!el.closest(".hero")){
+        observer.observe(el);
+      }
+    });
 
     return () => observer.disconnect();
   }, []);
@@ -48,7 +67,7 @@ export default function Home() {
             </h1>
 
             <p className="hero-text">
-              Como críminólogo especializado en derecho penal, ofrezco un enfoque integral que combina el análisis cirminológico con la defensa jurídica.
+              Como criminólogo especializado en derecho penal, ofrezco un enfoque integral que combina el análisis criminológico con la defensa jurídica.
             </p>
 
             <div className="hero-buttons">
