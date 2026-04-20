@@ -122,7 +122,7 @@ export default function Home() {
         <div className="container hero-content">
           {/* TEXTO HERO */}
           <div className={`hero-text-block animar-scroll from-bottom ${heroVisible ? "visible":""}`}>
-            <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal</span>
+            <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal Prueba</span>
 
             <h1 className="hero-title">
               La sentencia de un juicio no solo depende de las leyes, sino de cómo se argumenta la verdad.
