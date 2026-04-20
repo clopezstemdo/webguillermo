@@ -40,7 +40,7 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-content">
           {/* TEXTO HERO */}
-          <div className="hero-text-block animar-scroll from-left">
+          <div className="hero-text-block animar-scroll from-bottom">
             <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal</span>
 
             <h1 className="hero-title">
@@ -63,7 +63,7 @@ export default function Home() {
           </div>
 
           {/* IMAGEN HERO */}
-          <div className="hero-image-wrapper animar-scroll from-right">
+          <div className="hero-image-wrapper animar-scroll from-bottom">
             <img src={heroImage} alt="Imagen representativa criminología" />
           </div>
         </div>
