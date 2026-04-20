@@ -18,7 +18,7 @@
   align-items: flex-start; /* 🔑 CLAVE */
   opacity: 0;
   transform: translateY(15px);
-  animation: heroBtnIn 2s ease forwards;
+  animation: heroBtnIn 1s ease forwards;
 
 }
 
