@@ -82,16 +82,31 @@ export default function Home() {
           </motion.div>
 
           {/* IMAGEN HERO */}
-          <div className="hero-image-wrapper animar-hero">
+          <motion.div className="hero-image-wrapper"
+            initial= {{ opacity: 1, y: 30}}
+            animate= {{ opacity: 1, y: 0}}
+            transition={{
+              duration: 0.8,
+              ease: [0.22, 1, 0.36, 1]
+            }}
+          >
             <img src={heroImage} alt="Imagen representativa criminología" />
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* EXPERIENCIA */}
       <section className="experience-section">
         <div className="container experience-layout">
-          <div className="experience-text animar-scroll from-left">
+          <motion.div className="experience-text"
+            initial = {{opacity: 0, x: -50}}
+            whileInView={{ opacity: 1, x: 0}}
+            transition={{
+              duration: 0.7,
+              ease: [0.22, 1, 0.36, 1]
+            }}
+            viewport={{once: true, amount: 0.2}}
+          >
             <h2>Experiencia en Criminología y Derecho Penal</h2>
             <p>
               Como criminólogo especializado en el ámbito penal, ofrezco un enfoque integral que combina el análisis criminológico con la defensa jurídica. Mi formación me permite comprender no solo los aspectos legales, sino también los factores criminológicos que intervienen en cada caso.
@@ -103,9 +118,21 @@ export default function Home() {
               <li>Defensa personalizada y estratégica.</li>
               <li>Acompañamiento en todo el proceso judicial.</li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="experience-cards animar-scroll from-right">
+          
+          <motion.div
+            className="experience-cards"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 0.7,
+              ease: [0.22, 1, 0.36, 1],
+              delay: 0.1
+            }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+
             <div className="service-card">
               <div className="service-icon">
                 <img src={mazoIcon} alt="Asesoría penal" />
@@ -137,12 +164,22 @@ export default function Home() {
               <h4>Asesoramiento</h4>
               <p>Orientación jurídica preventiva y consultiva.</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* SOCIAL */}
-      <section className="social-section animar-scroll">
+      <motion.section
+        className="social-section"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.7,
+          ease: [0.22, 1, 0.36, 1]
+        }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+
         <h2>Mis publicaciones</h2>
         <p className="social-description">
           Sígueme en redes sociales para mantenerte actualizado
@@ -185,7 +222,7 @@ export default function Home() {
             <span>LinkedIn</span>
           </a>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }
