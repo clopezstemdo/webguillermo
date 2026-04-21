@@ -6,8 +6,6 @@ import instagramIcon from "../assets/instagram.svg";
 import linkedinIcon from "../assets/linkedin.svg";
 
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 
 import {motion} from "framer-motion";
 
@@ -56,7 +54,7 @@ export default function Home() {
 
           {/* IMAGEN HERO */}
           <motion.div className="hero-image-wrapper"
-            initial= {{ opacity: 1, y: 30}}
+            initial= {{ opacity: 0, y: 30}}
             animate= {{ opacity: 1, y: 0}}
             transition={{
               duration: 0.8,

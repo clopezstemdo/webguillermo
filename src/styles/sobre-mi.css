@@ -21,9 +21,9 @@
   background-color: #f5f7fa;
   padding: 4rem 1rem;
 
-      opacity: 0;
+      /* opacity: 0;
   transform: translateY(15px);
-  animation: heroBtnIn 1s ease forwards;
+  animation: heroBtnIn 1s ease forwards; */
 }
 
 
