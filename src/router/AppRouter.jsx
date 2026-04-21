@@ -12,7 +12,7 @@ const AppRouter = () => {
   const location = useLocation();
   return (
     <Routes>
-      <Route path="/" element={<Home key={location.key}/>} />
+      <Route path="/" element={<Home />} />
       <Route path="/contacto" element={<Contacto />} />
       <Route path="/servicios" element={<Servicios />} />
       <Route path="/sobre-mi" element={<SobreMi />} />

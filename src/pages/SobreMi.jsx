@@ -6,6 +6,8 @@ import tiktokIcon from "../assets/icons/tiktok.svg"
 import instagramIcon from "../assets/icons/instagram.svg"
 import linkedinIcon from "../assets/icons/linkedin.svg"
 
+import { motion } from "framer-motion";
+
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -83,6 +85,20 @@ const SobreMi = () => {
     }
   ];
 
+    
+  const fadeUpOnScroll = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }
+  };
+
+
   return (
     <>
       <section className="sobre-mi-hero">
@@ -95,7 +111,14 @@ const SobreMi = () => {
         </div>
       </section>
 
-      <section className="about-section">
+      
+      <motion.section
+        className="about-section"
+        variants={fadeUpOnScroll}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="about-section-inner">
           <div className="about-layout">
             {/* COLUMNA IZQUIERDA */}
@@ -134,7 +157,7 @@ const SobreMi = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <section className="reviews-section">
         <div className="embla" ref={emblaRef}>
