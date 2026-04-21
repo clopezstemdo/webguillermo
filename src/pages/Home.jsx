@@ -9,6 +9,8 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
+import {motion} from "framer-motion";
+
 import mazoIcon from "../assets/icons/mazo.svg";
 import escudoIcon from "../assets/icons/escudo.svg";
 import papelesIcon from "../assets/icons/papeles.svg";
@@ -49,8 +51,16 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-content">
           {/* TEXTO HERO */}
-          <div className="hero-text-block animar-hero">
-            <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal Prueba_v2</span>
+          <motion.div
+            className="hero-text-block"
+            initial = {{opacity: 0, y: 30}}
+            animate = {{opacity: 1, y: 0}}
+            transition={{
+              duration: 0.8,
+              ease: [0.22, 1, 0.36, 1]
+            }}
+          >
+            <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal Prueba_v3</span>
 
             <h1 className="hero-title">
               La sentencia de un juicio no solo depende de las leyes, sino de cómo se argumenta la verdad.
@@ -69,7 +79,7 @@ export default function Home() {
                 Ver servicios
               </NavLink>
             </div>
-          </div>
+          </motion.div>
 
           {/* IMAGEN HERO */}
           <div className="hero-image-wrapper animar-hero">
