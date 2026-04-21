@@ -6,8 +6,6 @@ import instagramIcon from "../assets/instagram.svg";
 import linkedinIcon from "../assets/linkedin.svg";
 
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 
 import {motion} from "framer-motion";
 
@@ -17,33 +15,6 @@ import papelesIcon from "../assets/icons/papeles.svg";
 import avatarIcon from "../assets/icons/avatar.svg";
 
 export default function Home() {
-  useEffect(() => {
-    const elements = document.querySelectorAll(".animar-scroll");
-
-    
-    // ✅ Reset visual (MUY IMPORTANTE en SPA)
-    elements.forEach(el => el.classList.remove("visible"));
-
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.15,
-        rootMargin: "0px 0px -10% 0px"
-      }
-    );
-
-    elements.forEach(el => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <>
@@ -60,7 +31,7 @@ export default function Home() {
               ease: [0.22, 1, 0.36, 1]
             }}
           >
-            <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal Prueba_v3</span>
+            <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal</span>
 
             <h1 className="hero-title">
               La sentencia de un juicio no solo depende de las leyes, sino de cómo se argumenta la verdad.
@@ -83,7 +54,7 @@ export default function Home() {
 
           {/* IMAGEN HERO */}
           <motion.div className="hero-image-wrapper"
-            initial= {{ opacity: 1, y: 30}}
+            initial= {{ opacity: 0, y: 30}}
             animate= {{ opacity: 1, y: 0}}
             transition={{
               duration: 0.8,

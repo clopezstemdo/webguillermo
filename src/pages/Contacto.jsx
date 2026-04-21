@@ -9,6 +9,8 @@ import tiktokIcon from "../assets/icons/tiktok.svg";
 import linkedinIcon from "../assets/icons/linkedin.svg";
 import whatsappIcon from "../assets/icons/whatsapp.svg";
 
+import { motion } from "framer-motion";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -92,10 +94,27 @@ const Contact = () => {
     return Object.keys(newErrors).length === 0;
   };
 
+  const fadeUpOnScroll = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }
+  };
+
   return (
     <section className="contact">
-      <div className="contact-container">
-
+      <motion.div
+        className="contact-container"
+        variants={fadeUpOnScroll}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         {/* COLUMNA IZQUIERDA */}
         <div className="contact-info">
           <h2>Ponte en contacto</h2>
@@ -252,7 +271,7 @@ const Contact = () => {
           </form>
         </div>
 
-      </div>
+      </motion.div>
       
       {showToast && (
         <div className="toast-success">
