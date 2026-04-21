@@ -1,28 +1,44 @@
 import "../styles/servicios.css";
 import { Link } from "react-router-dom";
+import {motion} from "framer-motion";
 import { useEffect } from "react";
 
 export default function Servicios() {
 
-  useEffect(() => {
-    const elements = document.querySelectorAll(".animar-scroll");
+  const fadeUpOnScroll = {
+    hidden: {
+      opacity: 0,
+      y: 30
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }
+  };
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target); // ✅ solo una vez
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
+  // useEffect(() => {
+    // const elements = document.querySelectorAll(".animar-scroll");
 
-    elements.forEach((el) => observer.observe(el));
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           entry.target.classList.add("visible");
+  //           observer.unobserve(entry.target); // ✅ solo una vez
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0.2 }
+  //   );
 
-    return () => observer.disconnect();
-  }, []);
+  //   elements.forEach((el) => observer.observe(el));
+
+  //   return () => observer.disconnect();
+  // }, []);
 
   return (
     <>
@@ -36,9 +52,25 @@ export default function Servicios() {
         </div>
       </section>
 
-      <section className="servicios-bloque animar-scroll">
+      
+      <motion.section
+        className="servicios-bloque"
+        variants={fadeUpOnScroll}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="container">
-          <h2>Área Penal y Criminológica</h2>
+          <h2>
+            Área Penal y Criminológica
+            <motion.span
+              className="subrayado"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+            />
+          </h2>
           <p className="servicios-intro">
             Estrategia, rigor científico y defensa de tus derechos en el
             proceso penal.
@@ -68,11 +100,27 @@ export default function Servicios() {
             </li>
           </ul>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="servicios-bloque servicios-alt animar-scroll">
+      
+      <motion.section
+        className="servicios-bloque servicios-alt"
+        variants={fadeUpOnScroll}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="container">
-          <h2>Facilitación Judicial</h2>
+          <h2>
+            Facilitación Judicial
+            <motion.span
+              className="subrayado"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+            />
+          </h2>
           <p className="servicios-intro">
             Garantizando el acceso a la justicia en igualdad de condiciones.
           </p>
@@ -94,11 +142,26 @@ export default function Servicios() {
             </li>
           </ul>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="servicios-bloque animar-scroll">
+      <motion.section
+        className="servicios-bloque"
+        variants={fadeUpOnScroll}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="container">
-          <h2>Área Penitenciaria</h2>
+          <h2>
+            Área Penitenciaria
+            <motion.span
+              className="subrayado"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+            />
+          </h2>
 
           <p>
             El cumplimiento de una condena no implica renunciar a la defensa.
@@ -121,12 +184,26 @@ export default function Servicios() {
             </li>
           </ul>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="servicios-bloque servicios-alt animar-scroll">
+      <motion.section
+        className="servicios-bloque servicios-alt"
+        variants={fadeUpOnScroll}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="container">
-          <h2>Justicia de Menores</h2>
-
+          <h2>
+            Justicia de Menores
+            <motion.span
+              className="subrayado"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+            />
+          </h2>
           <p>
             Intervención especializada con enfoque educativo y preventivo,
             priorizando la inserción social del menor.
@@ -147,11 +224,26 @@ export default function Servicios() {
             </li>
           </ul>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="servicios-bloque animar-scroll">
+      <motion.section
+        className="servicios-bloque"
+        variants={fadeUpOnScroll}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="container">
-          <h2>Área de Extranjería</h2>
+          <h2>
+            Área de Extranjería
+            <motion.span
+              className="subrayado"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+            />
+          </h2>
 
           <p>
             Protección legal y búsqueda de soluciones para regularizar tu
@@ -169,7 +261,7 @@ export default function Servicios() {
             </li>
           </ul>
         </div>
-      </section>
+      </motion.section>
 
       <section className="servicios-cta">
         <div className="container">

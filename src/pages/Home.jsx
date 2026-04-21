@@ -17,33 +17,6 @@ import papelesIcon from "../assets/icons/papeles.svg";
 import avatarIcon from "../assets/icons/avatar.svg";
 
 export default function Home() {
-  useEffect(() => {
-    const elements = document.querySelectorAll(".animar-scroll");
-
-    
-    // ✅ Reset visual (MUY IMPORTANTE en SPA)
-    elements.forEach(el => el.classList.remove("visible"));
-
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.15,
-        rootMargin: "0px 0px -10% 0px"
-      }
-    );
-
-    elements.forEach(el => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <>
@@ -60,7 +33,7 @@ export default function Home() {
               ease: [0.22, 1, 0.36, 1]
             }}
           >
-            <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal Prueba_v3</span>
+            <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal</span>
 
             <h1 className="hero-title">
               La sentencia de un juicio no solo depende de las leyes, sino de cómo se argumenta la verdad.
