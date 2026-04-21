@@ -92,7 +92,7 @@ const SobreMi = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.7,
+        duration: 1.5,
         ease: [0.22, 1, 0.36, 1]
       }
     }
