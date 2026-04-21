@@ -28,19 +28,19 @@ export default function Footer() {
 
           <ul className="footer-services-list">
             <li>
-              <Link to="/servicios">Área Penal y Criminológica</Link>
+              <Link to="/servicios#penal">Área Penal y Criminológica</Link>
             </li>
             <li>
-              <Link to="/servicios">Facilitación Judicial</Link>
+              <Link to="/servicios#facilitacion">Facilitación Judicial</Link>
             </li>
             <li>
-              <Link to="/servicios">Justicia de Menores</Link>
+              <Link to="/servicios#penitenciaria">Área Penitenciaria</Link>
             </li>
             <li>
-              <Link to="/servicios">Área de Extranjería</Link>
+              <Link to="/servicios#menores">Justicia de Menores</Link>
             </li>
             <li>
-              <Link to="/servicios">Área Penitenciaria</Link>
+              <Link to="/servicios#extranjeria">Área de Extranjería</Link>
             </li>
           </ul>
         </div>
