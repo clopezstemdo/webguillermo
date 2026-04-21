@@ -100,7 +100,7 @@ const Contact = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 1.5,
         ease: [0.22, 1, 0.36, 1]
       }
     }
