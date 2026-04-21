@@ -47,29 +47,27 @@ font-family: "Montserrat", sans-serif;  font-size: 24px;
   font-weight: 600;
 }
 
-.footer-services-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.footer-services ul {
+/* LISTA DE SERVICIOS DEL FOOTER */
+.footer-services-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-services li {
+.footer-services-list li {
   margin-bottom: 8px;
 }
 
+/* LINKS DE SERVICIOS */
+.footer-services-list a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
 
-.footer-services-center {
-  list-style: none;
-  padding: 0;
-  margin: 12px 0 0 0;
-  text-align: center;
-  font-weight: 500;
+.footer-services-list a:hover {
+  color: #6c001d; /* rojo corporativo */
+  font-weight: 600;
 }
 
 
@@ -82,10 +80,12 @@ font-family: "Montserrat", sans-serif;  font-size: 24px;
 .footer-contact a {
   color: inherit;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .footer-contact a:hover {
-  text-decoration: underline;
+  color: #6c001d; /* rojo corporativo */
+  font-weight: 600;
 }
 
 /* REDES ABAJO */
@@ -126,9 +126,9 @@ font-family: "Montserrat", sans-serif;  font-size: 24px;
     gap: 40px;
   }
 
-  .footer-services-grid {
+  /* .footer-services-grid {
     grid-template-columns: 1fr;
-  }
+  } */
 }
 
 
