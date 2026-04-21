@@ -255,7 +255,7 @@ const Contact = () => {
                 />
                 <span>
                   Autorizo a Guillermo Expósito Criminólogo a tratar mis datos para contactar conmigo, conforme a la información básica y adicional sobre {" "}
-                  <a href="/avisolegal" target="_blank" rel="noopener noreferrer">
+                  <a href="/avisolegal#proteccion-datos" target="_blank" rel="noopener noreferrer">
                     protección de datos.
                   </a>
                 </span>
