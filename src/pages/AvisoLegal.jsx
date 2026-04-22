@@ -1,6 +1,24 @@
 import "../styles/aviso-legal.css";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function AvisoLegal() {
+  
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  }, [location]);
+
+
   return (
     <>
       {/* HERO */}
@@ -91,22 +109,22 @@ export default function AvisoLegal() {
       </p>
 
 
-        <h2>7. Protección de datos</h2>
-        <p>
-         Guillermo Expósito Paulano trata la información que le facilita con el fin de prestarle el servicio solicitado 
-         o enviare la información requerida. Los datos proporcionados se conservarán mientras no nos solicite el cese 
-         de la actividad. Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal. 
-         Usted tiene derecho a obtener información sobre si Guillermo Expósito Paulano está tratando sus datos personales, 
-         por lo que puede ejercer sus derechos de acceso, rectificación, supresión y portabilidad de datos y oposición y 
-         limitación a su tratamiento ante Guillermo Expósito Paulano, Calle San Joaquín, 2 - 45600 Talavera de la Reina 
-         (Toledo) o en la dirección electrónica guillermoexpositocriminologo@gmail.com, identificándose suficientemente 
-         en su solicitud por medios electrónicos o, en su defecto, mediante solicitud debidamente firmada. No obstante, 
-         si el responsable del tratamiento tuviese dudas razonables en relación con la identidad de la persona física 
-         que cursa la solicitud podrá solicitar que se facilite información adicional necesaria para confirmar su identidad. 
-         Asimismo, y especialmente si considera que no ha obtenido satisfacción plena en el ejercicio de sus derechos, podrá 
-         presentar una reclamación ante la autoridad nacional de control dirigiéndose a estos efectos a la Agencia Española 
-         de Protección de Datos, C/ Jorge Juan, 6 – 28001 Madrid. 
-        </p>
+      <h2 id="proteccion-datos">7. Protección de datos</h2>
+      <p>
+        Guillermo Expósito Paulano trata la información que le facilita con el fin de prestarle el servicio solicitado 
+        o enviare la información requerida. Los datos proporcionados se conservarán mientras no nos solicite el cese 
+        de la actividad. Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal. 
+        Usted tiene derecho a obtener información sobre si Guillermo Expósito Paulano está tratando sus datos personales, 
+        por lo que puede ejercer sus derechos de acceso, rectificación, supresión y portabilidad de datos y oposición y 
+        limitación a su tratamiento ante Guillermo Expósito Paulano, Calle San Joaquín, 2 - 45600 Talavera de la Reina 
+        (Toledo) o en la dirección electrónica guillermoexpositocriminologo@gmail.com, identificándose suficientemente 
+        en su solicitud por medios electrónicos o, en su defecto, mediante solicitud debidamente firmada. No obstante, 
+        si el responsable del tratamiento tuviese dudas razonables en relación con la identidad de la persona física 
+        que cursa la solicitud podrá solicitar que se facilite información adicional necesaria para confirmar su identidad. 
+        Asimismo, y especialmente si considera que no ha obtenido satisfacción plena en el ejercicio de sus derechos, podrá 
+        presentar una reclamación ante la autoridad nacional de control dirigiéndose a estos efectos a la Agencia Española 
+        de Protección de Datos, C/ Jorge Juan, 6 – 28001 Madrid. 
+      </p>
 
 
       <h2>8. Política de cookies</h2>

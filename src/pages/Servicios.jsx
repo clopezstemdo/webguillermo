@@ -2,8 +2,26 @@ import "../styles/servicios.css";
 import { Link } from "react-router-dom";
 import {motion} from "framer-motion";
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 
 export default function Servicios() {
+
+  
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  }, [location]);
+
 
   const fadeUpOnScroll = {
     hidden: {
@@ -20,26 +38,6 @@ export default function Servicios() {
     }
   };
 
-  // useEffect(() => {
-    // const elements = document.querySelectorAll(".animar-scroll");
-
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           entry.target.classList.add("visible");
-  //           observer.unobserve(entry.target); // ✅ solo una vez
-  //         }
-  //       });
-  //     },
-  //     { threshold: 0.2 }
-  //   );
-
-  //   elements.forEach((el) => observer.observe(el));
-
-  //   return () => observer.disconnect();
-  // }, []);
-
   return (
     <>
       <section className="servicios-hero">
@@ -54,6 +52,7 @@ export default function Servicios() {
 
       
       <motion.section
+        id="penal"
         className="servicios-bloque"
         variants={fadeUpOnScroll}
         initial="hidden"
@@ -104,6 +103,7 @@ export default function Servicios() {
 
       
       <motion.section
+        id="facilitacion"
         className="servicios-bloque servicios-alt"
         variants={fadeUpOnScroll}
         initial="hidden"
@@ -145,6 +145,7 @@ export default function Servicios() {
       </motion.section>
 
       <motion.section
+        id="penitenciaria"
         className="servicios-bloque"
         variants={fadeUpOnScroll}
         initial="hidden"
@@ -187,6 +188,7 @@ export default function Servicios() {
       </motion.section>
 
       <motion.section
+        id="menores"
         className="servicios-bloque servicios-alt"
         variants={fadeUpOnScroll}
         initial="hidden"
@@ -227,6 +229,7 @@ export default function Servicios() {
       </motion.section>
 
       <motion.section
+        id="extranjeria"
         className="servicios-bloque"
         variants={fadeUpOnScroll}
         initial="hidden"

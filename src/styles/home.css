@@ -144,21 +144,6 @@
   }
 }
 
-/* ---------------- HERO BUTTON ANIMATION IN ---------------- */
-
-@keyframes heroBtnIn {
-  from {
-    opacity: 0;
-    /* transform: translateY(10px); */
-  }
-
-  to {
-    opacity: 1;
-    /* transform: translateY(0); */
-  }
-}
-
-
 /* -------- ACTIVE (CLICK) -------- */
 .hero-buttons a:active {
   transform: scale(0.98);

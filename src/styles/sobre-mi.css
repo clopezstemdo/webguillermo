@@ -20,10 +20,6 @@
 .about-section {
   background-color: #f5f7fa;
   padding: 4rem 1rem;
-
-      /* opacity: 0;
-  transform: translateY(15px);
-  animation: heroBtnIn 1s ease forwards; */
 }
 
 
@@ -34,13 +30,9 @@
 
 
 .about-layout {
-  /* background-color: #f5f7fa; */
-  /* max-width: 1400px; */
   display: flex;
   gap: 3rem;
-  /* align-items: flex-start; */
   align-items: stretch;
-  /* margin: 3rem auto 0; */
 }
 
 /* COLUMNA IZQUIERDA: ABOUT */
@@ -142,19 +134,6 @@
   margin-bottom: 2rem;
   color: #1f2937;
 }
-
-/* Carrusel */
-/* .reviews-carousel {
-  max-width: 1100px;
-  margin: 0 auto;
-
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
-
-  scroll-snap-type: x mandatory;
-} */
 
 /* Card */
 .review-card {
