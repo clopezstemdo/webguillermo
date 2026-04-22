@@ -64,16 +64,12 @@
   letter-spacing: 0.01em;
   position: relative;
   
-  padding-bottom: 4px;/*/*/
+  padding-bottom: 4px;
 
-  /* transition: color 0.25s ease; */
-  
   transition:
     color 0.25s ease,
     letter-spacing 0.25s ease,
     transform 0.25s ease;
-
-
 }
 
 
@@ -111,7 +107,6 @@
 
 /* LINK ACTIVO (página actual) */
 .nav-links a.active {
-  /* border-bottom: 2px solid #000; */
   padding-bottom: 4px;
   
   color: #6c001d;
@@ -163,20 +158,12 @@
     width: 350px;
     height: 100vh;
     /* Fondo Menu Deslizante */
-    /* background-color: #6c001d;#8b0026 ------------------------------------------*/ 
 
-    /* background-color: white;*/
-
-    /* display: flex; */
     flex-direction: column;
     align-items: stretch;
-    /*padding: 20px;
-    gap: 20px; */
-
     
     padding: 0;                
     background: transparent;
-
 
     transform: translateX(-100%);          /* ✅ oculto */
     transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
@@ -189,10 +176,6 @@
 
   
 /* MENÚ visible */
-  /* .nav-links.open {
-    left: 0;
-  } */
-
   .nav-links a {
     margin-left: 0;
     font-size: 20px;
@@ -304,13 +287,3 @@
 
 }
 
-
-/* ===================== */
-/* FOOTER */
-/* ===================== */
-
-/* .footer-content {
-  text-align: center;
-  color: #000;
-  font-size: 14px;
-} */
