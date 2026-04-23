@@ -118,7 +118,7 @@
 
 
 .btn-red:hover {
-  background-color: #8b0026;
+  background-color: #6c001d;
 }
 
 /* ===== REVIEWS ===== */
@@ -317,7 +317,7 @@
   background: #ffffff;
   padding: 3rem;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 55px 25px rgba(138, 76, 76, 0.08);
 }
 
 
@@ -432,4 +432,34 @@
     font-size: 14px;
   }
 
+}
+
+
+
+/* === FAQ ABIERTA (ACTIVA) === */
+.faq-item.open {
+  background-color: #6c001d;
+  box-shadow: 0 6px 18px rgba(108, 0, 29, 0.35);
+}
+
+/* Pregunta en blanco */
+.faq-item.open .faq-question {
+  color: #ffffff;
+}
+
+/* Flecha en blanco */
+.faq-item.open .faq-question::after {
+  color: #ffffff;
+}
+
+/* Respuesta en blanco */
+.faq-item.open .faq-answer {
+  color: #ffffff;
+}
+
+.faq-item,
+.faq-question,
+.faq-question::after,
+.faq-answer {
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
 }
