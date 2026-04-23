@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import {motion} from "framer-motion";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import penal from "../assets/penal.jpg";
+import facilitacion from "../assets/informecriminologico.jpg";
+import penitenciaria from "../assets/area-penitenciaria.webp";
+import justiciamenores from "../assets/justicia-menores.jpg";
+import extranjeria from "../assets/area-extranjeria.jpg";
 
 
 export default function Servicios() {
@@ -60,44 +65,53 @@ export default function Servicios() {
         viewport={{ once: true, amount: 0.2 }}
       >
         <div className="container">
-          <h2>
-            Área Penal y Criminológica
-            <motion.span
-              className="subrayado"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
-            />
-          </h2>
-          <p className="servicios-intro">
-            Estrategia, rigor científico y defensa de tus derechos en el
-            proceso penal.
-          </p>
+          <div className="servicio-card">
+            <div className="servicio-content">
+              <h2>
+                Área Penal y Criminológica
+                <motion.span
+                  className="subrayado"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                />
+              </h2>
+              <p className="servicios-intro">
+                Estrategia, rigor científico y defensa de tus derechos en el
+                proceso penal.
+              </p>
 
-          <p>
-            Enfrentarse a un procedimiento penal genera un alto grado de
-            incertidumbre. Mi labor consiste en dotar a tu caso de una base
-            técnica y estratégica, acompañándote en cada fase del proceso
-            para que tomes decisiones informadas y seguras.
-          </p>
+              <p>
+                Enfrentarse a un procedimiento penal genera un alto grado de
+                incertidumbre. Mi labor consiste en dotar a tu caso de una base
+                técnica y estratégica, acompañándote en cada fase del proceso
+                para que tomes decisiones informadas y seguras.
+              </p>
 
-          <ul className="servicios-lista">
-            <li>
-              <strong>Asesoramiento y acompañamiento judicial:</strong> Te
-              guío durante todo el procedimiento, traduciendo el lenguaje
-              jurídico y preparándote para cada intervención.
-            </li>
-            <li>
-              <strong>Informes criminológicos periciales:</strong>
-              Elaboración de dictámenes técnicos para la defensa o la
-              acusación, con enfoque científico.
-            </li>
-            <li>
-              <strong>Gestión post‑condena:</strong> Suspensión de condena,
-              cancelación de antecedentes y trámites penitenciarios.
-            </li>
-          </ul>
+              <ul className="servicios-lista">
+                <li>
+                  <strong>Asesoramiento y acompañamiento judicial</strong> Te
+                  guío durante todo el procedimiento, traduciendo el lenguaje
+                  jurídico y preparándote para cada intervención.
+                </li>
+                <li>
+                  <strong>Informes criminológicos periciales</strong>
+                  Elaboración de dictámenes técnicos para la defensa o la
+                  acusación, con enfoque científico.
+                </li>
+                <li>
+                  <strong>Gestión post‑condena</strong> Suspensión de condena,
+                  cancelación de antecedentes y trámites penitenciarios.
+                </li>
+              </ul>
+            </div>
+            
+            <div className="servicio-media">
+              <img src={penal} alt="Área Penal y Criminológica" />
+            </div>
+
+          </div>
         </div>
       </motion.section>
 
@@ -111,36 +125,43 @@ export default function Servicios() {
         viewport={{ once: true, amount: 0.2 }}
       >
         <div className="container">
-          <h2>
-            Facilitación Judicial
-            <motion.span
-              className="subrayado"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
-            />
-          </h2>
-          <p className="servicios-intro">
-            Garantizando el acceso a la justicia en igualdad de condiciones.
-          </p>
+          <div className="servicio-card">
+            <div className="servicio-content">
+              <h2>
+                Facilitación Judicial
+                <motion.span
+                  className="subrayado"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                />
+              </h2>
+              <p className="servicios-intro">
+                Garantizando el acceso a la justicia en igualdad de condiciones.
+              </p>
 
-          <p>
-            El entorno judicial puede resultar hostil, especialmente para
-            personas mayores o con discapacidad. La figura del facilitador
-            asegura la comprensión real del proceso.
-          </p>
+              <p>
+                El entorno judicial puede resultar hostil, especialmente para
+                personas mayores o con discapacidad. La figura del facilitador
+                asegura la comprensión real del proceso.
+              </p>
 
-          <ul className="servicios-lista">
-            <li>
-              <strong>Adaptación y apoyo cognitivo:</strong> Adecuación del
-              lenguaje judicial para una comprensión plena del proceso.
-            </li>
-            <li>
-              <strong>Reducción del estrés procesal:</strong> Acompañamiento
-              especializado que protege el bienestar emocional.
-            </li>
-          </ul>
+              <ul className="servicios-lista">
+                <li>
+                  <strong>Adaptación y apoyo cognitivo:</strong> Adecuación del
+                  lenguaje judicial para una comprensión plena del proceso.
+                </li>
+                <li>
+                  <strong>Reducción del estrés procesal:</strong> Acompañamiento
+                  especializado que protege el bienestar emocional.
+                </li>
+              </ul>
+            </div>
+            <div className="servicio-media">
+              <img src={facilitacion} alt="Facilitación Judicial" />
+            </div>
+          </div>
         </div>
       </motion.section>
 
@@ -153,37 +174,52 @@ export default function Servicios() {
         viewport={{ once: true, amount: 0.2 }}
       >
         <div className="container">
-          <h2>
-            Área Penitenciaria
-            <motion.span
-              className="subrayado"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
-            />
-          </h2>
+          <div className="servicio-card">
+            <div className="servicio-content">
+              <h2>
+                Área Penitenciaria
+                <motion.span
+                  className="subrayado"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                />
+              </h2>
+              
+              <p className="servicios-intro">
+                DEFENSA TÉCNICA Y GARANTÍA DE DERECHOS DURANTE LA EJECUCIÓN DE LA CONDENA
+              </p>
 
-          <p>
-            El cumplimiento de una condena no implica renunciar a la defensa.
-            Trabajo para garantizar tus derechos y optimizar el proceso de
-            reinserción.
-          </p>
+              <p>
+                El cumplimiento de una condena no implica renunciar a la defensa.
+                Trabajo para garantizar tus derechos y optimizar el proceso de
+                reinserción.
+              </p>
 
-          <ul className="servicios-lista">
-            <li>
-              <strong>Clasificación y progresiones de grado:</strong> Acceso
-              al tercer grado y régimen abierto.
-            </li>
-            <li>
-              <strong>Beneficios penitenciarios:</strong> Permisos, libertad
-              condicional y adelantamientos.
-            </li>
-            <li>
-              <strong>Recursos ante Vigilancia Penitenciaria:</strong>
-              Impugnación de sanciones o regresiones.
-            </li>
-          </ul>
+              <ul className="servicios-lista">
+                <li>
+                  <strong>Clasificación y progresiones de grado:</strong> Acceso
+                  al tercer grado y régimen abierto.
+                </li>
+                <li>
+                  <strong>Beneficios penitenciarios:</strong> Permisos, libertad
+                  condicional y adelantamientos.
+                </li>
+                <li>
+                  <strong>Recursos ante Vigilancia Penitenciaria:</strong>
+                  Impugnación de sanciones o regresiones.
+                </li>
+              </ul>
+            </div>
+            <div className="servicio-media">
+              <img
+                src={penitenciaria}
+                alt="Área Penitenciaria"
+              />
+
+            </div>
+          </div>
         </div>
       </motion.section>
 
@@ -196,35 +232,46 @@ export default function Servicios() {
         viewport={{ once: true, amount: 0.2 }}
       >
         <div className="container">
-          <h2>
-            Justicia de Menores
-            <motion.span
-              className="subrayado"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
-            />
-          </h2>
-          <p>
-            Intervención especializada con enfoque educativo y preventivo,
-            priorizando la inserción social del menor.
-          </p>
+          <div className="servicio-card">
+            <div className="servicio-content">
+              <h2>
+                Justicia de Menores
+                <motion.span
+                  className="subrayado"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                />
+              </h2>
+              <p className="servicios-intro">
+                ACTUACIÓN TÉCNICA ORIENTADA A LA INSERCIÓN Y PROTECCIÓN DEL MENOR
+              </p>
+              <p>
+                Intervención especializada con enfoque educativo y preventivo,
+                priorizando la inserción social del menor.
+              </p>
 
-          <ul className="servicios-lista">
-            <li>
-              <strong>Acompañamiento integral:</strong> Asesoramiento al
-              menor y a la familia desde el inicio del proceso.
-            </li>
-            <li>
-              <strong>Informes de valoración del riesgo:</strong> Análisis del
-              contexto y factores de protección.
-            </li>
-            <li>
-              <strong>Propuesta de medidas socioeducativas:</strong>
-              Alternativas a medidas privativas de libertad.
-            </li>
-          </ul>
+              <ul className="servicios-lista">
+                <li>
+                  <strong>Acompañamiento integral:</strong> Asesoramiento al
+                  menor y a la familia desde el inicio del proceso.
+                </li>
+                <li>
+                  <strong>Informes de valoración del riesgo:</strong> Análisis del
+                  contexto y factores de protección.
+                </li>
+                <li>
+                  <strong>Propuesta de medidas socioeducativas:</strong>
+                  Alternativas a medidas privativas de libertad.
+                </li>
+              </ul>
+            </div>
+            <div className="servicio-media">
+              <img src={justiciamenores} alt="Justicia de Menores" />
+            </div>
+
+          </div>
         </div>
       </motion.section>
 
@@ -237,32 +284,44 @@ export default function Servicios() {
         viewport={{ once: true, amount: 0.2 }}
       >
         <div className="container">
-          <h2>
-            Área de Extranjería
-            <motion.span
-              className="subrayado"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
-            />
-          </h2>
+          <div className="servicio-card">
+            <div className="servicio-content">
+              <h2>
+                Área de Extranjería
+                <motion.span
+                  className="subrayado"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                />
+              </h2>
 
-          <p>
-            Protección legal y búsqueda de soluciones para regularizar tu
-            situación administrativa en España.
-          </p>
+              <p className="servicios-intro">
+                PROTECCIÓN JURÍDICA Y ACOMPAÑAMIENTO EN PROCESOS DE REGULARIZACIÓN
+              </p>
 
-          <ul className="servicios-lista">
-            <li>
-              <strong>Recursos contra órdenes de expulsión:</strong> Análisis
-              exhaustivo del expediente y defensa administrativa.
-            </li>
-            <li>
-              <strong>Regularización extraordinaria:</strong> Gestión
-              integral de procedimientos de arraigo.
-            </li>
-          </ul>
+
+              <p>
+                Protección legal y búsqueda de soluciones para regularizar tu
+                situación administrativa en España.
+              </p>
+
+              <ul className="servicios-lista">
+                <li>
+                  <strong>Recursos contra órdenes de expulsión:</strong> Análisis
+                  exhaustivo del expediente y defensa administrativa.
+                </li>
+                <li>
+                  <strong>Regularización extraordinaria:</strong> Gestión
+                  integral de procedimientos de arraigo.
+                </li>
+              </ul>
+            </div>
+            <div className="servicio-media">
+              <img src={extranjeria} alt="Área Extranjería" />
+            </div>
+          </div>
         </div>
       </motion.section>
 

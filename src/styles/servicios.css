@@ -24,14 +24,53 @@
 
 }
 
-.servicios-bloque:hover {
+/* .servicios-bloque:hover {
   transform: scale(1.04) translateY(-14px);
   box-shadow: 0 40px 90px rgba(0, 0, 0, 0.18);
   z-index: 2;
-}
+} */
 
 .servicios-alt {
   background-color: #f5f5f5;
+}
+
+
+.servicio-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 40px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  align-items: center;
+}
+
+.servicio-card:hover {
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.12);
+}
+
+.servicio-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.servicio-media img {
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+
+  object-fit: cover;
+  border-radius: 10px;
+
+  filter: grayscale(100%);
+  opacity: 0.9;
 }
 
 /* TÍTULOS */
@@ -69,17 +108,30 @@
 }
 
 .servicios-intro {
-  font-weight: 600;
-  margin-bottom: 20px;
+  
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 14px;
+
+  margin-bottom: 22px;
+  color: #6c001d;
+
 }
 
+
+.servicio-content > p {
+  max-width: 720px;
+}
+
+
 .servicios-bloque p {
-  max-width: 800px;
+  /* max-width: 800px; */
   margin-bottom: 20px;
   line-height: 1.6;
 }
 
-.servicios-lista {
+/* .servicios-lista {
   list-style: none;
   padding-left: 0;
 }
@@ -87,7 +139,27 @@
 .servicios-lista li {
   margin-bottom: 15px;
   line-height: 1.6;
+} */
+
+.servicios-lista {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 32px;
 }
+
+.servicios-lista li {
+  margin-bottom: 22px;
+  line-height: 1.6;
+  color: #222;
+}
+
+.servicios-lista li strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #111;
+}
+
 
 /* CTA */
 .servicios-cta {
@@ -138,10 +210,22 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .servicios-bloque {
     scroll-margin-top: 80px;
   }
+
+  
+  .servicio-card {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 30px;
+  }
+
+  .servicio-media img {
+    max-height: 200px;
+  }
+
 }
 
 
