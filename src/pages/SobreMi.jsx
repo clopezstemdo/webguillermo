@@ -32,31 +32,31 @@ const SobreMi = () => {
 
   const reviews = [
     {
-      name: "Cliente 1",
+      name: "Logroño - Raúl Velasco",
       text: "Profesionalidad absoluta y acompañamiento constante durante todo el proceso.",
     },
     {
-      name: "Cliente 2",
+      name: "Lugo - Amaya Sánchez",
       text: "Explicaciones claras, trato cercano y estrategia perfectamente definida.",
     },
     {
-      name: "Cliente 3",
+      name: "Toledo - Samuel García",
       text: "Muy recomendable. Me sentí asesorado y respaldado desde el primer momento.",
     },
     {
-      name: "Cliente 4",
+      name: "Girona - Roberto Gutiérrez",
       text: "Gran conocimiento técnico y excelente comunicación.",
     },
     {
-      name: "Cliente 5",
+      name: "Ávila - María Cañas",
       text: "Trato muy profesional y cercano. En todo momento sentí que entendía bien el proceso y las opciones disponibles."
     },
     {
-      name: "Cliente 6",
+      name: "Madrid - Juan Muñoz",
       text: "Explicaciones claras y directas, sin tecnicismos innecesarios. Me ayudó a tomar decisiones con mayor seguridad."
     },
     {
-      name: "Cliente 7",
+      name: "Madrid - Nuria Gómez",
       text: "Acompañamiento constante durante todo el procedimiento. Destaco la claridad y la implicación desde el primer contacto."
     },
   ];
