@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "../styles/header-footer.css";
+import "../styles/header.css";
 import logo from "../assets/logoGuillermo.svg"
 import fotoGuillermo from "../assets/Guillermo.webp"
 import { useState } from "react";

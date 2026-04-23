@@ -11,6 +11,7 @@
   grid-template-columns: 2.2fr 1.6fr 1.6fr;
   gap: 60px;
   padding-bottom: 50px;
+  text-align: center;
 }
 
 
@@ -20,7 +21,7 @@
 
 /* IZQUIERDA */
 .footer-brand h3 {
-font-family: "Montserrat", sans-serif;  font-size: 24px;
+  font-family: "Montserrat", sans-serif;  font-size: 24px;
   margin-bottom: 16px;
   
   font-weight: normal;
@@ -125,10 +126,11 @@ font-family: "Montserrat", sans-serif;  font-size: 24px;
     grid-template-columns: 1fr;
     gap: 40px;
   }
-
-  /* .footer-services-grid {
-    grid-template-columns: 1fr;
-  } */
+  
+  .footer-brand {
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 
