@@ -91,17 +91,34 @@ export default function Footer() {
           </div>
 
           {/* ENLACES LEGALES */}
-          <div className="footer-legal">
+          {/* <div className="footer-legal">
             <Link to="/avisolegal">Aviso legal</Link>
-          </div>
+          </div> */}
 
         </div>
 
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Guillermo Expósito · Criminólogo</p>
+        <div className="container footer-bottom-grid">
+
+          <div className="footer-bottom-left">
+            © {new Date().getFullYear()} Guillermo Expósito · Criminólogo
+          </div>
+
+          <div className="footer-bottom-center">
+            <Link to="/avisolegal">Aviso legal</Link>
+            <span className="footer-separator">|</span>
+            <Link to="/politicaprivacidad">Política de privacidad</Link>
+          </div>
+
+          <div className="footer-bottom-right">
+            {/* vacío a propósito para mantener el grid */}
+          </div>
+
+        </div>
       </div>
+
     </footer>
   );
 }

@@ -32,7 +32,7 @@
   max-width: 1000px; /* igual que servicios-intro visual */
 }
 
-.aviso-legal {
+.legal-content {
   max-width: 900px;
   margin: 0 auto;
   padding: 4rem 1rem;
@@ -47,20 +47,20 @@
 
 }
 
-.aviso-legal h1 {
+.legal-content h1 {
   font-size: 2.4rem;
   margin-bottom: 2rem;
   color: #111827;
 }
 
-.aviso-legal h2 {
+.legal-content h2 {
   font-size: 1.4rem;
   margin-top: 2.5rem;
   margin-bottom: 0.75rem;
   color: #111827;
 }
 
-.aviso-legal p {
+.legal-content p {
   margin-bottom: 1rem;
   font-size: 0.95rem;
   color: #374151;
@@ -72,25 +72,12 @@
 
 
 @media (max-width: 600px) {
-  .aviso-legal {
+  .legal-content {
     padding: 3rem 1.25rem;
   }
 
-  .aviso-legal h1 {
+  .legal-content h1 {
     font-size: 2rem;
   }
 }
 
-.servicios-cta::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(255, 255, 255, 0.18),
-    transparent 70%
-  );
-  opacity: 0;
-  transition: opacity 0.6s ease;
-  pointer-events: none; /* 🔑 CLAVE */
-}
