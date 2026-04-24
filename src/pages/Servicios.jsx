@@ -149,11 +149,11 @@ export default function Servicios() {
 
               <ul className="servicios-lista">
                 <li>
-                  <strong>Adaptación y apoyo cognitivo:</strong> Adecuación del
+                  <strong>Adaptación y apoyo cognitivo</strong> Adecuación del
                   lenguaje judicial para una comprensión plena del proceso.
                 </li>
                 <li>
-                  <strong>Reducción del estrés procesal:</strong> Acompañamiento
+                  <strong>Reducción del estrés procesal</strong> Acompañamiento
                   especializado que protege el bienestar emocional.
                 </li>
               </ul>
@@ -203,11 +203,11 @@ export default function Servicios() {
                   al tercer grado y régimen abierto.
                 </li>
                 <li>
-                  <strong>Beneficios penitenciarios:</strong> Permisos, libertad
+                  <strong>Beneficios penitenciarios</strong> Permisos, libertad
                   condicional y adelantamientos.
                 </li>
                 <li>
-                  <strong>Recursos ante Vigilancia Penitenciaria:</strong>
+                  <strong>Recursos ante Vigilancia Penitenciaria</strong>
                   Impugnación de sanciones o regresiones.
                 </li>
               </ul>
@@ -254,15 +254,15 @@ export default function Servicios() {
 
               <ul className="servicios-lista">
                 <li>
-                  <strong>Acompañamiento integral:</strong> Asesoramiento al
+                  <strong>Acompañamiento integral</strong> Asesoramiento al
                   menor y a la familia desde el inicio del proceso.
                 </li>
                 <li>
-                  <strong>Informes de valoración del riesgo:</strong> Análisis del
+                  <strong>Informes de valoración del riesgo</strong> Análisis del
                   contexto y factores de protección.
                 </li>
                 <li>
-                  <strong>Propuesta de medidas socioeducativas:</strong>
+                  <strong>Propuesta de medidas socioeducativas</strong>
                   Alternativas a medidas privativas de libertad.
                 </li>
               </ul>
@@ -309,11 +309,11 @@ export default function Servicios() {
 
               <ul className="servicios-lista">
                 <li>
-                  <strong>Recursos contra órdenes de expulsión:</strong> Análisis
+                  <strong>Recursos contra órdenes de expulsión</strong> Análisis
                   exhaustivo del expediente y defensa administrativa.
                 </li>
                 <li>
-                  <strong>Regularización extraordinaria:</strong> Gestión
+                  <strong>Regularización extraordinaria</strong> Gestión
                   integral de procedimientos de arraigo.
                 </li>
               </ul>

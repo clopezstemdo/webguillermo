@@ -1,4 +1,4 @@
-import "../styles/aviso-legal.css";
+import "../styles/legal.css";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -32,7 +32,7 @@ export default function AvisoLegal() {
       </section>
 
       {/* CONTENIDO LEGAL */}
-      <main className="aviso-legal">
+      <main className="legal-content">
 
         <p>
         En cumplimiento de lo dispuesto en la Ley 34/2002, de 11 de julio, de

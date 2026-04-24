@@ -7,6 +7,7 @@ import Servicios from "../pages/Servicios";
 import SobreMi from "../pages/SobreMi";
 import Social from "../pages/social";
 import AvisoLegal from "../pages/AvisoLegal";
+import PoliticaPrivacidad from "../pages/PoliticaPrivacidad";
 
 const AppRouter = () => {
   const location = useLocation();
@@ -18,6 +19,7 @@ const AppRouter = () => {
       <Route path="/sobre-mi" element={<SobreMi />} />
       <Route path="/social" element={<Social />} />
       <Route path="/avisolegal" element={<AvisoLegal />} />
+      <Route path="/politicaprivacidad" element={<PoliticaPrivacidad />} />
     </Routes>
   );
 };
