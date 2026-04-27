@@ -31,7 +31,7 @@ export default function Home() {
               ease: [0.22, 1, 0.36, 1]
             }}
           >
-            <span className="hero-tag">⚖️ Asesoría en Criminología y Derecho Penal</span>
+            <span className="hero-tag">Asesoría en Criminología y Derecho Penal</span>
 
             <h1 className="hero-title">
               La sentencia de un juicio no solo depende de las leyes, sino de cómo se argumenta la verdad.
@@ -43,7 +43,7 @@ export default function Home() {
 
             <div className="hero-buttons">
               <NavLink to="/contacto" className="btn-primary">
-                Consulta gratuita
+                Solicita tu consulta
               </NavLink>
 
               <NavLink to="/servicios" className="btn-secondary">
@@ -109,7 +109,7 @@ export default function Home() {
                 <img src={mazoIcon} alt="Asesoría penal" />
               </div>
               <h4>Asesoría penal</h4>
-              <p>Asesoramiento en todas las fases del proceso penal.</p>
+              <p>Asesoramiento en cada fase del proceso para la toma de decisiones informadas y seguras.</p>
             </div>
 
             <div className="service-card">
@@ -117,7 +117,7 @@ export default function Home() {
                 <img src={escudoIcon} alt="Criminología" />
               </div>
               <h4>Criminología</h4>
-              <p>Análisis científico del comportamiento delictivo.</p>
+              <p>Análisis científico sobre la dinámica del delito, la evaluación de riesgos o el contexto del infractor o la víctima.</p>
             </div>
 
             <div className="service-card">
@@ -125,15 +125,15 @@ export default function Home() {
                 <img src={papelesIcon} alt="Informes periciales" />
               </div>
               <h4>Informes periciales</h4>
-              <p>Elaboración de informes criminológicos especializados.</p>
+              <p>Elaboración de dictámenes técnicos fundamentales para la defensa o la acusación.</p>
             </div>
 
             <div className="service-card">
               <div className="service-icon">
                 <img src={avatarIcon} alt="Asesoramiento" />
               </div>
-              <h4>Asesoramiento</h4>
-              <p>Orientación jurídica preventiva y consultiva.</p>
+              <h4>Acompañamiento</h4>
+              <p>Traduzco el lenguaje jurídico a términos comprensibles para mis clientes, preparándolos para afrontar cada intervención durente el proceso.</p>
             </div>
           </motion.div>
         </div>

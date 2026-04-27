@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import penal from "../assets/penal.jpg";
 import facilitacion from "../assets/informecriminologico.jpg";
-import penitenciaria from "../assets/area-penitenciaria.webp";
+import penitenciaria from "../assets/area-penitenciaria.jpg";
 import justiciamenores from "../assets/justicia-menores.jpg";
 import extranjeria from "../assets/area-extranjeria.jpg";
 
@@ -101,8 +101,8 @@ export default function Servicios() {
                   acusación, con enfoque científico.
                 </li>
                 <li>
-                  <strong>Gestión post‑condena</strong> Suspensión de condena,
-                  cancelación de antecedentes y trámites penitenciarios.
+                  <strong>Gestión después de la condena</strong> Suspensión de condena,
+                  cancelación de antecedentes.
                 </li>
               </ul>
             </div>
@@ -192,23 +192,23 @@ export default function Servicios() {
               </p>
 
               <p>
-                El cumplimiento de una condena no implica renunciar a la defensa.
-                Trabajo para garantizar tus derechos y optimizar el proceso de
-                reinserción.
+                El ingreso en prisión no suopne la pérdida del derecho de defensa. Trabajo para 
+                asegurar que la ejecución de la pena se ajuste a la legalidad y esté orientada
+                a la reinserción, optimizando el tiempo de cumplimiento. 
               </p>
 
               <ul className="servicios-lista">
                 <li>
-                  <strong>Clasificación y progresiones de grado:</strong> Acceso
-                  al tercer grado y régimen abierto.
+                  <strong>Clasificación y progresiones de grado</strong> Tramitación de expedientes para la obtención del 
+                  Tercer Grado y acceso al régimen abierto.
                 </li>
                 <li>
-                  <strong>Beneficios penitenciarios</strong> Permisos, libertad
-                  condicional y adelantamientos.
+                  <strong>Beneficios penitenciarios</strong> Preparación de solicitudes para la obtención de permisos 
+                  de salida (ordinario y extraordinarios).
                 </li>
                 <li>
                   <strong>Recursos ante Vigilancia Penitenciaria</strong>
-                  Impugnación de sanciones o regresiones.
+                  Por denegaciones de permisos, sanciones disciplinarias o regresiones de grado.
                 </li>
               </ul>
             </div>
@@ -245,25 +245,25 @@ export default function Servicios() {
                 />
               </h2>
               <p className="servicios-intro">
-                ACTUACIÓN TÉCNICA ORIENTADA A LA INSERCIÓN Y PROTECCIÓN DEL MENOR
+                ACTUACIÓN TÉCNICA ORIENTADA A LA EDUCACIÓN Y PROTECCIÓN DEL MENOR
               </p>
               <p>
                 Intervención especializada con enfoque educativo y preventivo,
-                priorizando la inserción social del menor.
+                priorizando el comportamiento prosocial del menor.
               </p>
 
               <ul className="servicios-lista">
                 <li>
-                  <strong>Acompañamiento integral</strong> Asesoramiento al
+                  <strong>Acompañamiento integral</strong> Asesoramiento y acompañamiento al
                   menor y a la familia desde el inicio del proceso.
                 </li>
                 <li>
                   <strong>Informes de valoración del riesgo</strong> Análisis del
-                  contexto y factores de protección.
+                  contexto así como de factores de riesgo y de protección.
                 </li>
                 <li>
                   <strong>Propuesta de medidas socioeducativas</strong>
-                  Alternativas a medidas privativas de libertad.
+                  Propuestas de sanciones alternativas a medidas privativas de libertad.
                 </li>
               </ul>
             </div>
@@ -298,23 +298,21 @@ export default function Servicios() {
               </h2>
 
               <p className="servicios-intro">
-                PROTECCIÓN JURÍDICA Y ACOMPAÑAMIENTO EN PROCESOS DE REGULARIZACIÓN
+                PROTECCIÓN LEGAL Y BÚSQUEDA DE SOLUCIONES PARA TU SITUACIÓN EN ESPAÑA
               </p>
 
 
               <p>
-                Protección legal y búsqueda de soluciones para regularizar tu
-                situación administrativa en España.
+                Soluciones viables y fundamentales para regularizar tu situación y proteger tu arraigo en el país.
               </p>
 
               <ul className="servicios-lista">
                 <li>
                   <strong>Recursos contra órdenes de expulsión</strong> Análisis
-                  exhaustivo del expediente y defensa administrativa.
+                  exhaustivo del expediente y para paralizar o revocar resoluciones de expulsión. 
                 </li>
                 <li>
-                  <strong>Regularización extraordinaria</strong> Gestión
-                  integral de procedimientos de arraigo.
+                  <strong>Regularización extraordinaria</strong> Asesoramiento y gestión integral del procedimiento, asegurando las opciones de éxito.
                 </li>
               </ul>
             </div>

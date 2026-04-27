@@ -1,5 +1,4 @@
 import "../styles/sobre-mi.css";
-import image from "../assets/Guillermo.webp";
 import { useState } from "react";
 import video from "../assets/videos/video.MP4"
 import tiktokIcon from "../assets/icons/tiktok.svg"
@@ -29,6 +28,13 @@ const SobreMi = () => {
     [autoplay]
   );
 
+//RESEÑAS DE CLIENTES//RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //
+//RESEÑAS DE CLIENTES//RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //RESEÑAS DE CLIENTES //
+
+/* Para cambiar las reseñas a clientes, solo tienes que modificar el array de objetos "reviews" con los nombres y textos que quieras mostrar.
+¿Cómo hacerlo? --> Nos encontramos con dos líneas: NAEM y TEXT, en name especificamos la provincia y el nombre. En text, escribimos el texto de la reseña. 
+Puedes añadir o quitar objetos del array para mostrar más o menos reseñas. Recuerda que el carrusel está configurado para mostrar 7 reseñas, así que lo ideal es tener al menos 7 objetos en el array para que se vea completo. Si tienes menos de 7, el carrusel repetirá las reseñas para llenar el espacio. 
+*/
 
   const reviews = [
     {
