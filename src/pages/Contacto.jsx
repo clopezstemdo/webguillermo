@@ -54,15 +54,17 @@ const Contact = () => {
     // ID de Servicio de Gmail(el mismo que se usa arriba): service_ddp5j4p
     //ID de template de Correo(diferente porque es el template del correo Repuesta): template_20yh0np
     //Public key(la misma que se usa arriba): EFu53trEKlEOzmhHL
-    emailjs.send(
-      "service_ddp5j4p",//ID Servicio Gmail
-      "template_20yh0np",//Id Template de correo Respuesta a Cliente
-      {
-        name: formData.name,
-        email: formData.email
-      },
-      "EFu53trEKlEOzmhHL" //ID Servicio Gmail
-    );
+    if (formData.email.trim()) {
+      emailjs.send(
+        "service_ddp5j4p",//ID Servicio Gmail
+        "template_20yh0np",//Id Template de correo Respuesta a Cliente
+        {
+          name: formData.name,
+          email: formData.email
+        },
+        "EFu53trEKlEOzmhHL" //ID Servicio Gmail
+      );
+    }
 
     
     setShowToast(true);
@@ -85,20 +87,42 @@ const Contact = () => {
     }
 
     // Teléfono: solo números y exactamente 9 dígitos
+    // const phoneRegex = /^[0-9]{9}$/;
+    // if (!formData.phone.trim()) {
+    //   newErrors.phone = "El teléfono es obligatorio";
+    // } else if (!phoneRegex.test(formData.phone)) {
+    //   newErrors.phone = "El teléfono debe tener 9 dígitos numéricos";
+    // }
+
+    // Email: formato válido básico
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // if (!formData.email.trim()) {
+    //   newErrors.email = "El email es obligatorio";
+    // } else if (!emailRegex.test(formData.email)) {
+    //   newErrors.email = "Introduce un email válido";
+    // }
+
+    
+  // Teléfono o Email (al menos uno)
+    if (!formData.phone.trim() && !formData.email.trim()) {
+      newErrors.contact =
+        "Debes introducir al menos un medio de contacto: teléfono o email";
+    }
+
+    
+    // Teléfono: validar solo si existe
     const phoneRegex = /^[0-9]{9}$/;
-    if (!formData.phone.trim()) {
-      newErrors.phone = "El teléfono es obligatorio";
-    } else if (!phoneRegex.test(formData.phone)) {
+    if (formData.phone.trim() && !phoneRegex.test(formData.phone)) {
       newErrors.phone = "El teléfono debe tener 9 dígitos numéricos";
     }
 
-    // Email: formato válido básico
+    // Email: validar solo si existe
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email.trim()) {
-      newErrors.email = "El email es obligatorio";
-    } else if (!emailRegex.test(formData.email)) {
+    if (formData.email.trim() && !emailRegex.test(formData.email)) {
       newErrors.email = "Introduce un email válido";
     }
+
+
 
     // Mensaje
     if (!formData.message.trim()) {
@@ -255,6 +279,10 @@ const Contact = () => {
               }
             />
             {errors.email && <span className="error">{errors.email}</span>}
+
+            {errors.contact && (
+              <span className="error">{errors.contact}</span>
+            )}
 
             <textarea
               placeholder="Describe tu caso"
