@@ -1,9 +1,9 @@
 import "../styles/home.css";
 
 import heroImage from "../assets/hero-image.jpg";
-import tiktokIcon from "../assets/tiktok.svg";
-import instagramIcon from "../assets/instagram.svg";
-import linkedinIcon from "../assets/linkedin.svg";
+import tiktokIcon from "../assets/icons/tiktok.svg";
+import instagramIcon from "../assets/icons/instagram.svg";
+import linkedinIcon from "../assets/icons/linkedin.svg";
 
 import { NavLink } from "react-router-dom";
 
