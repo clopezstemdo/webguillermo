@@ -10,8 +10,18 @@ import linkedinIcon from "../assets/icons/linkedin.svg";
 import whatsappIcon from "../assets/icons/whatsapp.svg";
 
 import { motion } from "framer-motion";
+import Servicios from "./Servicios";
 
 const Contact = () => {
+
+   // Servicio EmailJS
+  // service_ddp5j4p
+  //Public key
+  // EFu53trEKlEOzmhHL
+  //Template ID
+  //template_zkclswb
+  // Template ID Respuesta
+  // template_20yh0np
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -26,22 +36,32 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!validateForm()) return;
+    // Email con los datos del cliente
+    // Cosas necesarios:
+    // ID de Servicio de Gmail: service_ddp5j4p
+    //ID de template de Correo: template_zkclswb
+    //Public key: EFu53trEKlEOzmhHL
 
     emailjs.send(
-      "service_ddp5j4p",
-      "template_zkclswb",
+      "service_ddp5j4p",//ID Servicio Gmail
+      "template_zkclswb",//Id Template de correo con datos del Cliente
       formData,
-      "EFu53trEKlEOzmhHL"
+      "EFu53trEKlEOzmhHL"//ID Servicio Gmail
     );
 
+    // Email respuesta al cliente
+    // Cosas necesarios:
+    // ID de Servicio de Gmail(el mismo que se usa arriba): service_ddp5j4p
+    //ID de template de Correo(diferente porque es el template del correo Repuesta): template_20yh0np
+    //Public key(la misma que se usa arriba): EFu53trEKlEOzmhHL
     emailjs.send(
-      "service_ddp5j4p",
-      "template_20yh0np",
+      "service_ddp5j4p",//ID Servicio Gmail
+      "template_20yh0np",//Id Template de correo Respuesta a Cliente
       {
         name: formData.name,
         email: formData.email
       },
-      "EFu53trEKlEOzmhHL"
+      "EFu53trEKlEOzmhHL" //ID Servicio Gmail
     );
 
     
